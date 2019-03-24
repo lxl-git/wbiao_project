@@ -2,9 +2,9 @@ body {
     background: #fafafa !important;
 }
 .W_main {
+    $bg: #b32424;
     margin: 0 auto;
     width: 990px;
-    height: 757px;
     .W_top {
         height: 115px;
         a {
@@ -14,12 +14,13 @@ body {
     }
     .W_box {
         margin-top: 40px;
+        padding: 50px 0;
         width: 990px;
         height: 602px;
         background: #fff;
         border: 1px solid #f0f0f0;
         h5 {
-            padding: 50px 0 30px;
+            padding-bottom: 30px;
             font-size: 28px;
             color: #000;
             font-weight: 400;
@@ -68,7 +69,7 @@ body {
                         border: 1px solid #e8e8e8;
                     }
                     .min-input {width: 193px;}
-                    img, .r_stext {
+                    .r_stext {
                         float: right;
                         padding-left: 0;
                         width: 98px;
@@ -81,7 +82,8 @@ body {
                     margin: 8px 0 7px;
                     font-size:10px;
                     line-height:16px;
-                    color:red;
+                    font-weight: bold;
+                    color: $bg;
                     background: url(../image/icon-a-error-icon.png) no-repeat;
                 }
             }
@@ -94,7 +96,7 @@ body {
                 font-size: 14px;
                 color: #fff;
                 text-align: center;
-                background: #b32424;
+                background: $bg;
             }
             .condition {
                 padding-bottom: 20px;
