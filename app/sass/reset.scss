@@ -39,10 +39,23 @@ input, button, select, textarea {
 	-webkit-appearance: none;
 	border-radius: 0;
 }
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
+    color:#ccc;
+}
+input:-moz-placeholder, textarea:-moz-placeholder { 
+    color:#ccc;
+}
+input::-moz-placeholder, textarea::-moz-placeholder { 
+    color:#ccc;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder { 
+    color:#ccc;
+}
 textarea {
 	resize:none;
 }
-a{text-decoration: none;color:#000;}
+i,em {font-style: normal}
+a,u{text-decoration: none;color:#000;}
 blockquote, q {
 	quotes: none;
 }
