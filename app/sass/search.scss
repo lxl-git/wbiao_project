@@ -72,7 +72,6 @@ html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img,input {
 //内容区
 #s-main{
     height:6778px;
-    background: pink;
     .top{
         width: 1200px;
         height:36px;
@@ -113,19 +112,23 @@ html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img,input {
             }
         }
     }
+
     .main{
         width: 1200px;
         height: 6724px;
-        background:yellow;
+        // background:yellow;
         margin: 0 auto;
+        //网页左侧内容
         .main-left{
             width: 210px;
             height: 4802.6px;
             border: 1px solid #ccc;
             float: left;
+
             .left-one{
                 width: 210px;
                 height: 416px;
+
                 img{
                     width:210px;
                     height: 406px;
@@ -134,23 +137,112 @@ html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img,input {
             .left-two{
                 width: 210px;
                 height: 380px;
-                background: red;
+                // background: red;
                 .top{
                     width: 210px;
-                    height:40px;
-                    background: #ccc;
+                    height: 40px;
+                    // background: blue;
+                    .Add{
+                        color: #666;
+                        font-weight: 700;
+                    }
+                    li{
+                        display: inline-block;
+                        color: #999;
+                        font-size: 14px;
+                        text-align: center;
+                        height: 40px;
+                        line-height: 40px;
+                    }
+                    .consult,.acc{
+                        width: 102px;
+                        height: 40px;
+                    }
+                }
+                .two-one{
+                    width: 208px;
+                    height: 276px;
+                    // background: yellow;
+                    font-size: 12px;
+                    .two-one-one{
+                        float: left;
+                        list-style: none;
+                        position: relative;
+                        width: 208px;
+                        a{
+                            position: relative;
+                            display: block;
+                            overflow: hidden;
+                            margin: 20px 15px 0 15px;
+                            color: #666;
+                            line-height: 1.5;
+                            cursor: pointer;
+                            .imgg{
+                                width: 64px;
+                                height: 64px;
+                                position: relative;
+                                background-color: #fff;
+                                overflow: hidden;
+                                border: 1px solid #ddd;
+                                box-sizing: border-box;
+                                float: left;
+                                img{
+                                    width: auto;
+                                    height: 98%;
+                                    margin: 1%;
+                                    border: 0;
+                                    display: block;
+                                }
+                            }
+                            div{
+                                width: 104px;
+                                margin-left: 10px;
+                                float: right;
+                                p{
+                                    display: block;
+                                    margin-block-start: 1em;
+                                    margin-block-end: 1em;
+                                    margin-inline-start: 0px;
+                                    margin-inline-end: 0px;
+                                }
+                                .p1{
+                                    color: #333;
+                                    font-weight: 700;
+                                    line-height: 12px;
+                                    margin-top: 4px;
+                                    margin-bottom: 8px;
+                                }
+                                .p2{
+                                    color: #999;
+                                    line-height: 18px;
+                                    overflow: hidden;
+                                    -webkit-line-clamp: 2;
+                                    -webkit-box-orient: vertical;
+                                    word-break: break-all;
+                                    display: -webkit-box;
+                                }
+                            }
+                        }
+                    }
                 }
             }
             .left-three{
                 width: 210px;
                 height: 2563.6px;
-                p{  
+                //最近浏览
+                .p3{  
+                    color: #666;
+                    font-size: 14px;
+                    font-weight: 700;
+                    height: 40px;
+                    line-height: 40px;
+                    background-color: #f1f1f1;
+                    padding-left: 12px;
                     display: block;
                     margin-block-start: 1em;
                     margin-block-end: 1em;
                     margin-inline-start: 0px;
-                    margin-inline-end: 0px;
-                    
+                    margin-inline-end: 0px;    
                 }
                 .three-main{
                     color: #959595;
@@ -162,22 +254,718 @@ html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img,input {
                     height: 40px;
                 }
                 ul{
-                    margin-block-start: 1em;
-                    margin-block-end: 1em;
-                    margin-inline-start: 0px;
-                    margin-inline-end: 0px;
-                    padding-inline-start: 40px;
+                    
+                    li{
+                        width: 178px;
+                        height:222.8px;
+                        display: block;
+                        margin: 0 auto;
+                        margin-bottom:  28px;
+                        img{
+                            margin: 0 auto;
+                        }
+                        .p1{
+                            width: 178px;
+                            height: 17.6px;
+                            color: #333;
+                            font-weight: 700; 
+                            font-size: 12px;
+                            line-height: 12px;
+                            margin: 5px 0;                        
+                        }
+                        .p2{
+                            // width: 178px;
+                            // height: 35.2px;
+                            font-size: 12px;
+                            line-height: 18px;
+                            overflow: hidden;
+                            -webkit-line-clamp: 2;
+                            -webkit-box-orient: vertical;
+                            word-break: break-all;
+                            margin: 0;
+                        }
+                    }
+                    }
+                }
+            .left-four{
+                    width: 210px;
+                    height: 550.4px;
+                    .top{
+                        width: 210px;
+                        height: 40px;
+                        .Add{
+                            color: #666;
+                            font-weight: 700;
+                        }
+                        li{
+                            display: inline-block;
+                            color: #999;
+                            font-size: 14px;
+                            text-align: center;
+                            height: 40px;
+                            line-height: 40px;
+                            
+                        }
+                        .consult,.acc{
+                            width: 102px;
+                            height: 40px;
+                        }
+                    }
+                    .four-main{
+                        width: 210px;
+                        height: 296px;
+                        font-size: 12px;
+                        color: #959595;
+                        line-height: 20px;
+                        border: 1px solid #eee;
+                        .main-one{
+                            display: none;
+                           ul{
+                               
+                               li{
+                                display: list-item;
+                                text-align: -webkit-match-parent;
+                                    a{
+                                        display: block;
+                                        width: 90%;
+                                        margin: 0 auto 14px;
+                                        line-height: 13px;
+                                        color: #666;
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;
+                                        overflow: hidden;
+                                    }
+                               }
+                           }
+                        }
+                        .main-two{
+                            width: 208px;
+                            height: 462.4px;
+                            p{
+                                text-indent: 2em;
+                                line-height: 18px;
+                                padding: 0 10px;
+                                margin-bottom: 20px;
+                            }
+                        }
+                    }
+                }
+            .left-five{
+                    width: 210px;
+                    height: 982px;
+                    // background: red;
+                    .top{
+                        width: 210px;
+                        height: 40px;
+                        // background: blue;
+                        li{
+                            display: inline-block;
+                            color: #999;
+                            font-size: 14px;
+                            text-align: center;
+                            height: 40px;
+                            line-height: 40px;
+                            
+                        }
+                        .Add{
+                            color: #666;
+                            font-weight: 700;
+                        }
+                        .consult,.acc{
+                            width: 102px;
+                            height: 40px;
+                        }
+                    }
+                    .five-main{
+                        // padding-top: 20px;
+                        color: #959595;
+                        line-height: 20px;
+                        border: 1px solid #eee;
+                        .five-main-one{
+                            display: none;
+                            a{  
+                                display: block;
+                                margin: 0 20px 20px 20px;
+                                color: #666;
+                                text-decoration: none;
+                                color: #666;
+                                line-height: 1.5;
+                                cursor: pointer;
+                                font-size: 12px;
+                            }
+                            i{
+                                display: inline-block;
+                                width: 26px;
+                                height: 26px;
+                                line-height: 25px;
+                                text-align: center;
+                                border: 1px solid #ddd;
+                                border-radius: 50%;
+                                box-sizing: border-box;
+                                margin-right: 16px;
+                                color: #999;  
+                            }
+                        }
+                        .five-main-two{
+                            padding: 0 8px 12px 8px;
+                            // background: red;
+                            width: 208px;
+                            height: 439px;
+                            color: #959595;
+                            line-height: 20px;
+                            a{
+                                display: inline-block;
+                                color: #666;
+                                padding: 4px 11px;
+                                border: 1px solid #ddd;
+                                border-radius: 100px;
+                                margin-right: 4px;
+                                margin-bottom: 8px;
+                                line-height: 1.5;
+                                cursor: pointer;
+                                font-size: 12px;
+                            }
+                        }
                     }
                 }
             }
         }
-
-
+        //网页右侧内容
         .main-right{
             width:970px ;
             height: 6724px;
             border: 1px solid #ccc;
             float: right;
-        }
-    }
+                //网页右侧内容区 第一部分
+                .main-head{
+                    width: 970px;
+                    height: 346px;
+                    position: relative;
+                    // background: green;
+                    // <!--头部第一个板块 搜索词-->
+                    .head-top{
+                        width: 970px;
+                        height: 33.6px;
+                        position: relative;
+                        background: #fafafa;
+                        min-width: 22px;
+                        line-height: 22px;
+                        padding: 5px 80px 5px 12px;
+                        border: 1px solid #ddd;
+                        border-bottom: 0;
+                        font-size: 12px;
+                        .result{
+                            display: inline-block;
+                            line-height: 22px;
+                            color: #666;
+                            a{
+                                display: inline-block;
+                                height: 22px;
+                                line-height: 22px;
+                                border: 1px solid #dfdfdf;
+                                padding: 0 3px;
+                                margin-left: 5px;
+                                color: #313131;
+                                box-sizing: border-box;
+                                b{
+                                    color: #333;
+                                    font-weight: bold;
+                                }
+                                em{
+                                    display: inline-block;
+                                    margin-left: 5px;
+                                }
+                            }
+                        }
+                        .recall{
+                            color: #999;
+                            position: absolute;
+                            top: 7px;
+                            right: 10px;
+                            float: right;
+                        }
+                    }
+                    // <!--头部第二个板块 筛选-->
+                    .head-center{
+                        width: 970;
+                        height:282.4px;
+                        .bodyone{
+                            width: 968px;
+                            height: 42px;
+                        line-height: 40px;
+                        position: relative;
+                        border-bottom: 1px solid #eee;
+                        span{  
+                            width:80px;
+                            height: 40px;
+                            font-size: 12px;
+                            border-top: 1px solid #fff;                     
+                            padding: 0 12px;
+                            font-weight: 700;
+                            color: #666;
+                            background-color: #fafafa;
+                            float: left;
+                            line-height: 40px;
+                        }
+                        .onediv{
+                            width: 876px;
+                            height: 41px;
+                            position: relative;
+                            margin-left: 80px;
+                            margin-right: 12px;
+                            line-height: 40px;
+                            .option{
+                                
+                                height: 40px;
+                                padding: 7px 15px;
+                                
+                                float: left;
+                                line-height: 30px;
+                                ul{
+                                    width: 750px;
+                                    height: 25.6px;
+                                    display: block;                               
+                                    .lione{
+                                        margin-right: 23px;
+                                        display: block;
+                                        float: left;
+                                        a{
+                                            background: #333;
+                                            color: #fff;
+                                            border-radius: 2px;
+                                            padding: 0 3px;
+                                            line-height: 26px;
+                                            font-size: 12px;
+                                        }
+                                    }
+                                    .litwo{
+                                        margin-right: 23px;
+                                        display: block;
+                                        float: left;
+                                        a{
+                                            font-size: 12px;
+                                            width: 28.8px;
+                                            height:14.6px;
+                                            color: #666;
+                                            padding: 0 3px;
+                                            line-height: 26px;
+                                        }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        #brand{
+                        width: 968px;
+                        height: 118.4px;
+                        #brand-span{
+                            height: 116.4px;
+                        }
+                        li{
+                            width: 110px;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            margin-right: 10px;
+                        }
+                    }
+                    }   
+                    // <!--头部第三个板块 更多选项-->
+                    .head-botton{
+                        width: 280px;
+                        height: 20px;
+                        line-height: 20px;
+                        position: absolute;
+                        bottom: 4px;
+                        left: 50%;
+                        margin-left: -140px;
+                        text-align: center;
+                        margin-bottom: 1px;
+                        color: #666;
+                        font-size: 12px;
+                        .head-botton-main{
+                                width: auto;
+                                display: inline-block;
+                                padding: 0 13px;
+                                height: 24px;
+                                background-color: #fff;
+                                border: 1px solid #ddd;
+                                border-top-color: #fff;
+                                cursor: pointer;
+                                color: #999;
+                                line-height: 20px;
+                                text-align: center;
+                                .more{
+                                    
+                                }
+                                .icon{
+                                    font-size: 12px;
+                                }
+                            }
+                    }   
+                }
+
+
+
+
+
+
+
+                //网页右侧内容 第二部分
+                .main-body{
+                    width: 970px;
+                    // height: 5777px;
+                    border: 1px solid #ddd;
+                    border-top: 0;
+                    color: #666;
+                    font-size: 12px;
+                        .body-one{
+                            position: relative;
+                            border-bottom: 1px solid #eee;
+                            font-size: 12px;
+                            .sort_a{
+                                display: inline-block;
+                                vertical-align: top;
+
+                                ul{
+                                    margin-block-start: 1em;
+                                    margin-block-end: 1em;
+                                    margin-inline-start: 0px;
+                                    margin-inline-end: 0px;
+                                    padding-inline-start: 40px;
+
+                                    li{
+                                        display: block;
+                                        float: left;
+                                        width: 80px;
+                                        height: 36px;
+                                        text-align: center;
+                                        
+                                        a{
+                                            position: relative;
+                                            line-height: 34px;
+                                            display: inline-block;
+                                            color: #666;
+                                        }
+                                    }
+                                    .on a{
+                                        color: #cc9952;
+                                        font-weight: 700;
+                                        border-bottom: 3px solid #cc9952;
+                                    }
+                                }
+                            }
+                            .sort_b{
+                                width:400px;
+                                height: 17.6px;
+                                display: inline-block;
+                                margin-top: 20px;
+                                padding-left: 10px;
+                                border-left: 1px solid #ddd;
+                                font-size: 12px;
+
+                                a{  
+                                    width: 69.33px;
+                                    height: 13.6px;
+                                    margin-left: 20px;
+                                    text-decoration: none;
+                                    color: #666;
+                                    line-height: 1.5;
+                                    cursor: pointer;
+
+                                    .radio_def{
+                                        position: relative;
+                                        display: inline-block;
+                                        width: 14px;
+                                        height: 14px;
+                                        border: 1px solid #ccc;
+                                        border-radius: 20%;
+                                        margin-bottom: -3px;
+                                        margin-right: 4px;
+                                        box-sizing: border-box;
+                                        color: #666;
+                                        line-height: 1.5;
+                                        cursor: pointer;
+                                        
+                                        i{  
+                                            display: block;
+                                            background-position: -293px -256px;
+                                            background-size: 475px;
+                                            width: 14px;
+                                            height: 14px;
+                                        }
+                                    }
+                                }
+                            }
+                            .sort_c{
+                                width: 96px;
+                                height: 36px;
+                                line-height: 36px;
+                                float: right;
+
+                                .back{
+                                    position: relative;
+                                    display: inline-block;
+                                    width: 24px;
+                                    height: 24px;
+                                    text-align: center;
+                                    vertical-align: middle;
+                                    z-index: 0;
+                                    color: #666;
+                                    line-height: 1.5;
+
+                                    i{
+                                        position: absolute;
+                                        top: 6px;
+                                        left: 6px;
+                                        background-position: -576px -474px;
+                                        background-size: 589px;
+                                        width: 6px;
+                                        height: 11px;
+                                        display: block;
+                                    }
+                                }
+
+                                .page_num{
+                                    margin-right: 10px;
+                                    font-size: 14px;
+                                    color: #999;
+                                    line-height: 36px;
+
+                                    i{
+                                        font-size: 14px;
+                                    }
+                                }
+                            }   
+                        }
+                        .body-two{
+                            width: 970px;
+                            // height: 5640px;
+                            height: 600px;
+
+                            .clearfix{
+                                margin-right: -8.6px;
+
+                                li{
+                                    position: relative;
+                                    width: 236px;
+                                    height: 450px;
+                                    display: block;
+                                    overflow: hidden;
+                                    float: left;
+                                    margin: 10px 8.6px 10px 0;
+
+                                    .show-img{
+                                        display: block;
+                                        overflow: hidden;
+                                        width: 220px;
+                                        height: 275px;
+                                        margin: 10px auto 5px auto;
+                                        position: relative;
+                                        text-align: center;
+                                        color: #666;
+                                        line-height: 1.5;
+                                        cursor: pointer;
+
+                                        img{
+                                            width: auto;
+                                            height: 275px;
+                                            position: absolute;
+                                            left: 50%;
+                                            margin-left: -137.5px;
+                                            background-color: #fff;
+                                            background: #e6e6e6;
+                                            border: 0;
+                                            display: block;
+                                        }
+                                    }
+
+                                    .goods_txt{
+                                        margin: 0 16px;
+                                        padding-bottom: 20px;
+                                        line-height: 18px;
+                                        font-size: 12px;
+
+                                        .prc{
+                                            overflow: hidden;
+                                            margin-bottom: 10px;
+                                            line-height: 18px;
+
+                                            .s-prc{
+                                                color: #333;
+                                                font-size: 18px;
+                                                font-family: DIN-Bold;
+                                                line-height: 18px;
+
+                                                em{
+                                                    color: #333;
+                                                    font-size: 18px;
+                                                    font-family: DIN-Bold;
+                                                }
+                                            }
+                                            del{
+                                                color: #ccc;
+                                                font-family: DIN-Bold;
+                                                margin-left: 5px;
+                                            }
+                                            
+                                        }
+                                        .des{
+                                            width: 204px;
+                                            height: 36px;
+                                            line-height: 18px;
+                                            margin-bottom: 8px;
+                                            color: #666;
+                                            overflow: hidden;
+                                            -webkit-line-clamp: 2;
+                                            -webkit-box-orient: vertical;
+                                            word-break: break-all;
+                                            display: -webkit-box;
+                                            font-size: 12px;
+                                        }
+                                        .sale{
+                                            margin-bottom: 4px;
+                                            color: #999;
+                                            line-height: 18px;
+
+                                            .sale_tip{
+                                                color: #cc5252;
+                                                margin-bottom: 8px;
+                                                text-overflow: ellipsis;
+                                                white-space: nowrap;
+                                                overflow: hidden;
+                                            }
+                                            .sale_num{
+                                                color: #999;
+                                            }
+                                        }
+                                        .s-shop{
+                                            display: block;
+                                            margin-bottom: 7px;
+                                            color:#999;
+                                        }
+                                        .tag{
+                                            span{
+                                                background: 0 0;
+                                                border: 1px solid #cc9952;
+                                                color: #cc9952;
+                                                padding: 0 7px;
+                                                border-radius: 2px;
+                                                display: inline-block;
+                                                line-height: 16px;
+                                            }
+                                        }
+                                        .collect{
+                                            width: 204px;
+                                            height: 30px;
+                                            line-height: 18px;
+                                            position: absolute;
+                                            bottom: 10px;
+                                            width: 204px;
+                             display: none;
+                                            background: #fff;
+
+                                            .collect-one{
+                                                width: 50%;
+                                                text-align: center;
+                                                line-height: 28px;
+                                                color: #333;
+                                                display: block;
+                                                float: left;
+                                                border: 1px solid #eee;
+                                            }
+                                            .collect-two{
+                                                color: #cc5252;
+                                                margin-left: -1px;
+                                                display: block;
+                                                float: left;
+                                                border: 1px solid #eee;
+                                                box-sizing: border-box;
+                                                width: 50%;
+                                                text-align: center;
+                                                line-height: 28px;
+                                                font-size: 12px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .body-three{
+                            text-align: center;
+                            padding: 30px 0 40px;
+                            
+                            span,a{
+                                display: inline-block;
+                                width: 28px;
+                                height: 28px;
+                                line-height: 28px;
+                                font-size: 14px;
+                                color: #999;
+                                margin-left: 8px;
+                                border-radius: 50%;
+                                border: 1px solid #fff;
+                            }
+
+                            //鼠标移入时给span 和 a 添加背景颜色
+                            .active{
+                                border: 1px solid #666;
+                                background-color: #666;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+
+                 //网页右侧内容 第三部分
+                .main-foot{
+                    width: 970px;
+                    height: 511px;
+                    background: green;
+                    margin-bottom: 50px;
+                    background: #fff;
+                    font-size: 12px;
+                    .hot{
+                        width: 970px;
+                        height: 73px;
+                        padding: 22px 12px 0;
+                        color: #666;
+                        ul{
+                            height: 26px;
+                            overflow: hidden;
+                            display: block;
+                            li{
+                                display: block;
+                                float: left;
+                                margin-right: 15px;
+                                margin-bottom: 8px;
+                                color: #666;
+                                a{
+                                    color: #999;
+                                }
+                                a:hover{
+                                    color: red;
+                                 }
+                            }
+                            
+                        }
+                        p{
+                            width: 946px;
+                            height: 19px;
+                            padding-bottom: 6px;
+                            margin-bottom: 6px;
+                            border-bottom: 1px solid #eee;
+                            color: #666;
+                                b{
+                                    font-weight: bold;
+                                }
+                                a{
+                                    line-height: 12px;
+                                    float: right;
+                                    color: #666;
+                                }
+                        }
+                    }
+                }
+            }
+
 
