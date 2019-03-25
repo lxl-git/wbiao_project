@@ -59,7 +59,7 @@ body {
                     }
                     .icon-eye-close {background-position: -142px -92px;}
                     .icon-eye-open {background-position: -188px -137px;}
-                    input {
+                    input, button {
                         padding-left: 35px;
                         width:301px;
                         height:38px;
@@ -73,16 +73,18 @@ body {
                         float: right;
                         padding-left: 0;
                         width: 98px;
-                        height: 38px;
+                        height: 40px;
+                        font-size: 14px;
+                        color: #999;
                     }
                 }
                 i {
-                    display: block;
+                    display: none;
                     padding-left: 18px;
                     margin: 8px 0 7px;
                     font-size:10px;
                     line-height:16px;
-                    font-weight: bold;
+                    font-weight: 700;
                     color: $bg;
                     background: url(../image/icon-a-error-icon.png) no-repeat;
                 }
