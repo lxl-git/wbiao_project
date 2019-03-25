@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/register.css">
+    <link rel="icon" href="https://www.wbiao.cn/favicon.ico" mce_href="//www.wbiao.cn/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -18,13 +19,13 @@
         </div>
         <div class="W_box">
             <h5>注册万表会员</h5>
-            <form class="content_box">
+            <form method="POST" action="http://localhost/IM/register.php" class="content_box">
                 <div class="box">
                     <p>
                         <em class="icon icon-phone"></em>
-                        <input type="text" name="phone" placeholder="请输入手机号码">
+                        <input type="text" name="phone" placeholder="请输入手机号码" required>
                     </p>
-                    <i>请输入手机号码</i>
+                    <i>请输入正确手机号码</i>
                 </div>
 
                 <div class="box">
@@ -50,7 +51,7 @@
                 <div class="box">
                     <p>
                         <em class="icon icon-psd"></em>
-                        <input type="password" name="password" placeholder="请设置密码">
+                        <input type="password" name="password" placeholder="请设置密码" required>
                         <b class="icon2 icon-eye-close"></b>
                     </p>
                     <i>密码应为6-20位任意字符组合</i>
@@ -59,7 +60,7 @@
                 <div class="box">
                     <p>
                         <em class="icon icon-psd"></em>
-                        <input type="password" placeholder="请再次输入密码">
+                        <input type="password" placeholder="请再次输入密码" required>
                         <b class="icon2 icon-eye-close"></b>
                     </p>
                     <i>两次密码不一致，请检查您的密码</i>
@@ -70,7 +71,8 @@
                         <input type="text" placeholder="如有推荐人，请填写推荐人手机号">
                     </p>
                 </div>
-                <a href="#" class="register">立即注册</a>
+
+                <button type="submit" class="register">立即注册</a>
                 <p class="condition">点击“立即注册”，即表示您同意并愿意遵守
                     <a target="_blank" href="https://www.wbiao.com/help-25.html">万表网用户协议</a>
                 </p>

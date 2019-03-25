@@ -1,5 +1,5 @@
 define(['api'], function(api) {
-    let inputAll, $i, $btn, timer
+    let inputAll, $i, $btnAll, timer
     let check = {
         phone(val) {
             const reg = /^1[34578]\d{9}$/
@@ -14,7 +14,7 @@ define(['api'], function(api) {
         init() {
             inputAll = api.$All('input');
             $i = api.$All('i');
-            $btn = api.$('button')
+            $btnAll = api.$All('button');
             this.event()
         },
         event() {
@@ -28,25 +28,41 @@ define(['api'], function(api) {
                     self.tips(this);
                 }
             }
-            $btn.onclick = function () {
-                let flag = $btn.disabled = "disabled" 
+            $btnAll[0].onclick = function () {
+                let flag = $btnAll[0].disabled = "disabled" 
                 let num = 60,
                 timer = setInterval(function () {
                     num--
-                    $btn.innerText = num  + '秒再次获取';
+                    $btnAll[0].innerText = num  + '秒再次获取';
                     if(num === 0) {
                         clearInterval(timer);
-                        flag = $btn.disabled = null; 
-                        $btn.innerHTML = '获取验证码'
+                        flag = $btnAll[0].disabled = null; 
+                        $btnAll[0].innerHTML = '获取验证码'
                     }
                 }, 1000) 
+            }
+            $btnAll[1].onclick = function (e) {
+                e = e || window.event;
+                for(let i = 0; i < inputAll.length -1; i++ ) {
+                    let none =api.Style($i[i], 'display')
+                    if(inputAll[i].className == "min-input") {
+                        // console.log(inputAll[i])
+                        continue;
+                    }
+                    if(none) {
+                        console.log(none)
+                        console.log('所有表单验证成功');
+                    }else {
+                        inputAll[i].focus();
+                        e.preventDefault ? e.preventDefault() : e.returnValue = false;
+                    }
+                }
             }
             inputAll[4].onblur = function () {
                let val = inputAll[4].value
                const tip = this.parentNode.nextElementSibling;
                if(( val === inputAll[3].value) && val != '') {
                    tip.style.display = 'none';
-                    console.log('验证成功')
                }else {
                     tip.style.display = 'block';
                }
@@ -58,7 +74,6 @@ define(['api'], function(api) {
             tip = input.parentNode.nextElementSibling;
             // console.log(check[name](val))
             if(check[name](val)) {
-                console.log('验证成功')
                 tip.style.display = 'none'
             }else {
                 tip.style.display = 'block';

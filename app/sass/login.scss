@@ -1,0 +1,102 @@
+body {
+    background: #fafafa !important; }
+  
+  .W_main {
+    margin: 0 auto;
+    width: 990px; }
+    .W_main .W_top {
+      height: 115px; }
+      .W_main .W_top a {
+        display: inline-block;
+        margin-top: 52px; }
+    .W_main .W_box {
+      margin-top: 40px;
+      padding: 50px 0;
+      width: 990px;
+      height: 602px;
+      background: #fff;
+      border: 1px solid #f0f0f0; }
+      .W_main .W_box h5 {
+        padding-bottom: 30px;
+        font-size: 28px;
+        color: #000;
+        font-weight: 400;
+        text-align: center; }
+      .W_main .W_box .content_box {
+        margin: 0 auto;
+        width: 338px;
+        height: 451px; }
+        .W_main .W_box .content_box .box {
+          font-size: 12px; }
+          .W_main .W_box .content_box .box p {
+            position: relative;
+            margin-top: 15px;
+            line-height: 38px; }
+            .W_main .W_box .content_box .box p .icon {
+              display: block;
+              position: absolute;
+              top: 11px;
+              left: 11px;
+              width: 13px;
+              height: 16px;
+              background: url(../image/a.png); }
+            .W_main .W_box .content_box .box p .icon-phone {
+              background-position: -576px -25px; }
+            .W_main .W_box .content_box .box p .icon-note {
+              background-position: -576px 0; }
+            .W_main .W_box .content_box .box p .icon-psd {
+              background-position: -576px -51px; }
+            .W_main .W_box .content_box .box p .icon2 {
+              display: block;
+              position: absolute;
+              top: 11px;
+              right: 11px;
+              width: 16px;
+              height: 16px;
+              background: url(../image/d.png); }
+            .W_main .W_box .content_box .box p .icon-eye-close {
+              background-position: -142px -92px; }
+            .W_main .W_box .content_box .box p .icon-eye-open {
+              background-position: -188px -137px; }
+            .W_main .W_box .content_box .box p input, .W_main .W_box .content_box .box p button {
+              padding-left: 35px;
+              width: 301px;
+              height: 38px;
+              line-height: 38px;
+              font-size: 12px;
+              background: transparent;
+              border: 1px solid #e8e8e8; }
+            .W_main .W_box .content_box .box p .min-input {
+              width: 193px; }
+            .W_main .W_box .content_box .box p .r_stext {
+              float: right;
+              padding-left: 0;
+              width: 98px;
+              height: 40px;
+              font-size: 14px;
+              color: #999; }
+          .W_main .W_box .content_box .box i {
+            display: none;
+            padding-left: 18px;
+            margin: 8px 0 7px;
+            font-size: 10px;
+            line-height: 16px;
+            font-weight: 700;
+            color: #b32424;
+            background: url(../image/icon-a-error-icon.png) no-repeat; }
+        .W_main .W_box .content_box .register {
+          display: block;
+          margin: 35px 0 0;
+          width: 340px;
+          height: 38px;
+          line-height: 38px;
+          font-size: 14px;
+          color: #fff;
+          text-align: center;
+          background: #b32424; }
+        .W_main .W_box .content_box .condition {
+          padding-bottom: 20px;
+          line-height: 38px;
+          font-size: 12px;
+          color: #999; }
+  
