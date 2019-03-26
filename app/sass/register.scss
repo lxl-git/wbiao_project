@@ -1,10 +1,11 @@
 body {
     background: #fafafa !important;
 }
-.W_logo {
+.W_main {
     $bg: #b32424;
     margin: 0 auto;
     width: 990px;
+    /* logo_box */ 
     .W_top {
         height: 115px;
         a {
@@ -26,10 +27,12 @@ body {
             font-weight: 400;
             text-align: center;
         }
+        /* form */ 
         .content_box {
             margin: 0 auto;
             width: 338px;
             height: 451px;
+            /* input_box */ 
             .box {
                 font-size: 12px;
                 p {
@@ -78,6 +81,7 @@ body {
                         color: #999;
                     }
                 }
+                /* tips */ 
                 i {
                     display: none;
                     padding-left: 18px;

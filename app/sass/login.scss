@@ -1,3 +1,4 @@
+/* logo */
 $bg: #cc5252;
 .W_logo {
     margin: 0 auto;
@@ -10,6 +11,7 @@ $bg: #cc5252;
         }
     }
 }
+/* login */
 #W_box{
     background: url(../image/bg.jpg) -125px;
     height: 580px;
@@ -23,6 +25,7 @@ $bg: #cc5252;
             width: 380px;
             height: 460px;
             background: #fff;
+            /* logo_tab*/
             .logo_tab {
                 padding: 40px 0 20px;
                 margin: 0 auto;
@@ -45,6 +48,7 @@ $bg: #cc5252;
                     color: grey;
                 }
             }
+            /* login_way */ 
             .phone {
                 display: block;
             }
@@ -54,6 +58,7 @@ $bg: #cc5252;
             .code_login {
                 display: none;
             }
+            /* code_login */
             .code_login {
                 position: relative;
                 margin: 0 auto;
@@ -135,6 +140,7 @@ $bg: #cc5252;
                     text-align: center;
                 }
             }
+            /* phone or password*/
             .user_login {
                 margin: 0 auto;
                 width: 300px;
@@ -152,8 +158,9 @@ $bg: #cc5252;
                             line-height: 44px;
                             border: 1px solid #ddd;
                         }
+                        /* tips */ 
                         i {
-                            display: block;
+                            display: none;
                             margin-top: 8px;
                             padding-left: 10px;
                             font-size: 14px;
@@ -230,6 +237,7 @@ $bg: #cc5252;
         }
     }
 }
+/* about */
 .W_buttom {
     margin: 0 auto;
     padding: 50px 0;

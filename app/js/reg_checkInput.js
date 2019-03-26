@@ -1,5 +1,6 @@
 define(['api'], function(api) {
     let inputAll, $i, $btnAll, timer
+    // regexp
     let check = {
         phone(val) {
             const reg = /^1[34578]\d{9}$/
@@ -12,6 +13,7 @@ define(['api'], function(api) {
     }
     return {
         init() {
+            // 获取DOM元素
             inputAll = api.$All('input');
             $i = api.$All('i');
             $btnAll = api.$All('button');
@@ -19,6 +21,7 @@ define(['api'], function(api) {
         },
         event() {
             const self = this;
+            // 循环input，添加onblur事件
             for(let i = 0; i < inputAll.length -1; i++ ) {
                 if(inputAll[i].className == "min-input") {
                     // console.log(inputAll[i])
@@ -28,6 +31,7 @@ define(['api'], function(api) {
                     self.tips(this);
                 }
             }
+            // 验证码
             $btnAll[0].onclick = function () {
                 let flag = $btnAll[0].disabled = "disabled" 
                 let num = 60,
@@ -41,6 +45,7 @@ define(['api'], function(api) {
                     }
                 }, 1000) 
             }
+            // 验证表单
             $btnAll[1].onclick = function (e) {
                 e = e || window.event;
                 for(let i = 0; i < inputAll.length -1; i++ ) {
@@ -68,6 +73,7 @@ define(['api'], function(api) {
                }
             }
         },
+        // input 合法值判断
         tips(input) {
             let name = input.name,
             val = input.value;
