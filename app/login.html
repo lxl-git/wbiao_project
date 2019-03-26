@@ -6,46 +6,107 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="https://www.wbiao.cn/favicon.ico" mce_href="//www.wbiao.cn/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/register.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/login.css">
+    <title>万表网登录</title>
 </head>
 <body>
-    <div class="W_main">
+    <div class="W_logo">
         <div class="W_top">
             <a href="#"><img src="./image/logo-icon.png" alt=""></a>
         </div>
-        <div class="W_box">
-            <h5>注册万表会员</h5>
+    </div>
+    <div id="W_box">
+        <div class="W_box_content">
             <form method="POST" action="http://localhost/IM/register.php" class="content_box">
-                <div class="box">
-                    <p>
-                        <em class="icon icon-phone"></em>
-                        <input type="text" name="phone" placeholder="请输入手机号码" required>
-                    </p>
-                    <i>请输入正确手机号码</i>
+                <div class="logo_tab">
+                    <span>会员登录</span>
+                    <span>扫码登录</span>
                 </div>
-
-                <div class="box">
-                    <p>
-                        <em class="icon icon-note"></em>
-                        <input type="text" class="min-input" placeholder="请输入图形验证码">
-                        <img src="https://pu.wbiao.cn/pub/captcha2?w=98&h=38&0.9487819925233867"
-                            onclick="this.src='/pub/captcha2?w=98&amp;h=38&amp;'+Math.random();" alt="验证码"
-                            title="看不清？点击更换另一个验证码。" class="r_imgCaptcha fr r_stext">
+                <div class="user_login phone">
+                    <div class="box">
+                        <p>
+                            <em class="icon icon-phone"></em>
+                            <input type="text" name="phone" placeholder="请输入手机号码" required>
+                            <i>请输入正确手机号码</i>
+                        </p>
+                    </div>
+                    <div class="box">
+                        <p>
+                            <em class="icon icon-note"></em>
+                            <input type="text" class="min-input" placeholder="请输入图形验证码">
+                            <img src="https://pu.wbiao.cn/pub/captcha2?w=98&h=38&0.9487819925233867"
+                                onclick="this.src='/pub/captcha2?w=98&amp;h=38&amp;'+Math.random();" alt="验证码"
+                                title="看不清？点击更换另一个验证码。" class="r_imgCaptcha fr r_stext">
+                        </p>
+                        <!-- <i>请填写图形验证码</i> -->
+                    </div>
+                    <div class="box">
+                        <p>
+                            <em class="icon icon-note"></em>
+                            <input type="text" class="min-input" placeholder="请输入短信验证码">
+                            <button class="r_stext" id="getcaptcha" type="button" title="点击获取验证码" value="">获取验证码</button>
+                        </p>
+                        <!-- <i>请输入验证码</i> -->
+                    </div>
+                    <button type="submit" class="login">立即登录</button>
+                    <a href="./register.html">免费注册</a>
+                    <p class="pos">
+                        <a href="javascript:void(0);">账号密码</a>
+                        <em>|</em>
+                        <a href="javascript:void(0);">社交登录</a>
                     </p>
-                    <i>请填写图形验证码</i>
                 </div>
-
-                <div class="box">
-                    <p>
-                        <em class="icon icon-note"></em>
-                        <input type="text" class="min-input" placeholder="请输入短信验证码">
-                        <button class="r_stext" id="getcaptcha" type="button" title="点击获取验证码" value="">获取验证码</button>
+                <div class="user_login password">
+                    <div class="box">
+                        <p>
+                            <em class="icon icon-phone"></em>
+                            <input type="text" name="phone" placeholder="手机号码/会员名/邮箱" required>
+                            <i>请输入正确手机号码</i>
+                        </p>
+                    </div>
+                    <div class="box">
+                        <p>
+                            <em class="icon icon-note"></em>
+                            <input type="text" placeholder="密码">
+                        </p>
+                        <!-- <i>请输入验证码</i> -->
+                    </div>
+                    <button type="submit" class="login">立即登录</button>
+                    <a href="./register.html" class="left">免费注册</a>
+                    <a href="./register.html" class="right">忘记密码</a>
+                    <p class="pos">
+                        <a href="javascript:void(0);">
+                            手机动态码登录
+                            <em class="icon_hot"></em>
+                        </a>
+                        <em>|</em>
+                        <a href="javascript:void(0);">社交登录</a>
                     </p>
-                    <i>请输入验证码</i>
+                </div>
+                <div class="code_login">
+                    <div class="code_pic"> 
+                        <img src="./image/qr.png" alt="二维码">
+                    </div>
+                    <p>
+                        使用
+                        <em>万表APP</em>
+                        扫码登录<br>
+                        <i>在首页顶部搜索栏点击扫一扫</i>
+                    </p>
+                    <div class="qr">
+                        <img src="./image/master-qr.png" alt=""/>
+                    </div>
+                    <a href="javascript:void(0);">下载万表APP</a>
                 </div>
             </form>
         </div>
+    </div>
+    <div class="W_buttom">
+        <p>
+            万表网名表商城 版权所有 2008-2017 ICP备案证书号:粤ICP备09108738号 网监备案:4401060103141</br>
+            广州市万表科技股份有限公司 地址:广州市番禺区番禺大道北60-1号</br>
+            Copyright 2008-2017 WWW.WBIAO.CN.LTD ALL RIGHT RESERVED.</br>
+        </p>
     </div>
 </body>
 </html>

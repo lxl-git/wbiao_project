@@ -1,7 +1,7 @@
 body {
     background: #fafafa !important;
 }
-.W_main {
+.W_logo {
     $bg: #b32424;
     margin: 0 auto;
     width: 990px;
@@ -89,7 +89,7 @@ body {
                     background: url(../image/icon-a-error-icon.png) no-repeat;
                 }
             }
-            .register {
+            .register{
                 display: block;
                 margin: 35px 0 0;
                 width:340px;
@@ -99,6 +99,7 @@ body {
                 color: #fff;
                 text-align: center;
                 background: $bg;
+                border: none;   
             }
             .condition {
                 padding-bottom: 20px;
