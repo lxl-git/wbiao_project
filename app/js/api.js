@@ -23,7 +23,6 @@ define(function (api) {
                     console.log('ie8-')
                     return obj.currentStyle[attr];
                 }
-        },
-        getRandom (min, max) {}    
+        },   
     }
 });
