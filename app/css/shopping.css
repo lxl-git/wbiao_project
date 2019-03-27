@@ -1,0 +1,80 @@
+.cont_show_box {
+  width: 100%;
+  height: 115px; }
+  .cont_show_box .cont_show {
+    width: 990px;
+    height: 95px;
+    margin: 0 auto;
+    padding: 0 110px; }
+    .cont_show_box .cont_show .cont_left {
+      width: 404px;
+      height: 95px;
+      position: relative;
+      display: block;
+      float: left; }
+      .cont_show_box .cont_show .cont_left h1 {
+        display: inline-block; }
+        .cont_show_box .cont_show .cont_left h1 .conta1 {
+          display: inline-block;
+          margin: 8px 0 12px 45px !important;
+          width: 121px;
+          height: 75px; }
+      .cont_show_box .cont_show .cont_left .conta2 {
+        display: inline-block;
+        margin-top: 8px;
+        width: 175px;
+        height: 75px; }
+    .cont_show_box .cont_show .cont_right {
+      width: 468px;
+      height: 40px;
+      margin-top: 35px;
+      margin-right: 40px;
+      float: right;
+      font-size: 12px;
+      background: url(../image/navpashoop1_03.jpg) no-repeat center; }
+
+.main_show_box {
+  padding: 110px 0 265px;
+  text-align: center;
+  width: 100%;
+  height: 238px; }
+  .main_show_box .mian_show {
+    width: 990px;
+    height: 238px;
+    margin: 0 auto; }
+    .main_show_box .mian_show .icon-cart {
+      display: block;
+      background: url(../image/a.png) no-repeat;
+      background-position: 0 -112px;
+      background-size: 589px;
+      width: 82px;
+      height: 84px;
+      margin: 0 auto 21px; }
+    .main_show_box .mian_show .p1 {
+      font-size: 18px;
+      color: #666;
+      line-height: 25px; }
+    .main_show_box .mian_show .p2 {
+      font-size: 14px;
+      color: #999;
+      line-height: 20px;
+      margin-top: 5px; }
+      .main_show_box .mian_show .p2 .to_login {
+        color: #cc5252;
+        text-decoration: underline; }
+    .main_show_box .mian_show .cart_btn {
+      margin-top: 47px; }
+      .main_show_box .mian_show .cart_btn a {
+        display: inline-block;
+        width: 100px;
+        height: 34px;
+        line-height: 34px;
+        border: 1px solid #cc5252;
+        border-radius: 100px;
+        margin: 0 9px;
+        font-size: 14px; }
+      .main_show_box .mian_show .cart_btn .goto_shoping {
+        background: #cc5252;
+        color: #fff; }
+      .main_show_box .mian_show .cart_btn .look_collect {
+        color: #cc5252; }

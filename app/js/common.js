@@ -8,8 +8,8 @@ var $top_aaa = (function(){
              $top_box_fool = $('.top_box_fool');// 下拉显示
              $top_box_show_a = $('.top_box > a') // 下拉容器a
              $dd_a = $('.inst_middle dl dd a');// 尾部a标签
-             console.log($dd_a);
              this.event();
+             this.logdr();
         },
         event(){
             $top_box.on("mouseenter","a",function(){  // a标签移入
@@ -34,6 +34,22 @@ var $top_aaa = (function(){
             $dd_a.on("mouseleave",function(){
                 $(this).css('color','rgb(153, 153, 153)');
             })
+        },
+        logdr(){
+            let $top_rifht_left_a1= $('.top_rifht_left_a1');
+            let $top_right_Left_a2 = $('.top_right_Left_a2');
+            var phone = localStorage.getItem('phone');
+            if(phone){
+                $top_rifht_left_a1.text('');
+                $top_rifht_left_a1.css('width','0');
+                $top_right_Left_a2.text('用户  '+phone);
+                $top_right_Left_a2.css({'width':'159px','font-weight':'700','color':'#cc9952'});
+            }else{
+                $top_rifht_left_a1.text('请登录');
+                $top_right_Left_a2.text('注册即送3500元大礼包');
+                $top_rifht_left_a1.css('width','36px');
+                $top_right_Left_a2.css({'width':'125px','font-weight':'400','color':'rgb(174, 15, 23)'});
+            }
         }
     }
 }())
