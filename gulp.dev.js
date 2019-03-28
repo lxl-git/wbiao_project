@@ -19,10 +19,7 @@ gulp.task('allFile', function() {
 })
 
 gulp.task('watch', function() {
-<<<<<<< HEAD
   // '!app/sass/**/*'
-=======
->>>>>>> watch
   gulp.watch(['app/**/*'], ['allFile']);
   gulp.watch('app/sass/**/*.scss', ['sass']);
 })
