@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>万表网注册</title>
+    <link rel="icon" href="https://www.wbiao.cn/favicon.ico" mce_href="//www.wbiao.cn/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/register.css">
+</head>
+
+<body>
+    <!-- logo -->
+    <div class="W_main">
+        <div class="W_top">
+            <a href="#"><img src="./image/logo-icon.png" alt=""></a>
+            <a href="#"><img src="./image/slogan-0224.png" alt=""></a>
+        </div>
+        <!-- register_box -->
+        <div class="W_box">
+            <h5>注册万表会员</h5>
+            <form method="POST" action="http://localhost/wbiao_project/dist/server/register.php" class="content_box">
+                <div class="box">
+                    <p>
+                        <em class="icon icon-phone"></em>
+                        <input type="text" name="phone" placeholder="请输入手机号码" required>
+                    </p>
+                    <i>请输入正确手机号码</i>
+                </div>
+
+                <div class="box">
+                    <p>
+                        <em class="icon icon-note"></em>
+                        <input type="text" class="min-input" placeholder="请输入图形验证码">
+                        <img src="https://pu.wbiao.cn/pub/captcha2?w=98&h=38&0.9487819925233867"
+                            onclick="this.src='/pub/captcha2?w=98&amp;h=38&amp;'+Math.random();" alt="验证码"
+                            title="看不清？点击更换另一个验证码。" class="r_imgCaptcha fr r_stext">
+                    </p>
+                    <i>请填写图形验证码</i>
+                </div>
+
+                <div class="box">
+                    <p>
+                        <em class="icon icon-note"></em>
+                        <input type="text" class="min-input" placeholder="请输入短信验证码">
+                        <button class="r_stext" id="getcaptcha" type="button" title="点击获取验证码" value="">获取验证码</button>
+                    </p>
+                    <i>请输入验证码</i>
+                </div>
+
+                <div class="box">
+                    <p>
+                        <em class="icon icon-psd"></em>
+                        <input type="password" name="password" placeholder="请设置密码" required>
+                        <b class="icon2 icon-eye-close"></b>
+                    </p>
+                    <i>密码应为6-20位任意字符组合</i>
+                </div>
+
+                <div class="box">
+                    <p>
+                        <em class="icon icon-psd"></em>
+                        <input type="password" placeholder="请再次输入密码" required>
+                        <b class="icon2 icon-eye-close"></b>
+                    </p>
+                    <i>两次密码不一致，请检查您的密码</i>
+                </div>
+
+                <div class="box">
+                    <p>
+                        <input type="text" placeholder="如有推荐人，请填写推荐人手机号">
+                    </p>
+                </div>
+                <!-- reg_btn -->
+                <button type="submit" class="register">立即注册</button>
+                <p class="condition">点击“立即注册”，即表示您同意并愿意遵守
+                    <a target="_blank" href="https://www.wbiao.com/help-25.html">万表网用户协议</a>
+                </p>
+            </form>
+        </div>
+    </div>
+    <script  data-main="./js/register.js" src="https://cdn.bootcss.com/require.js/2.3.5/require.min.js"></script>
+    
+</body>
+
+</html>

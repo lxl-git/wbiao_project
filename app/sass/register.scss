@@ -1,0 +1,116 @@
+body {
+    background: #fafafa !important;
+}
+.W_main {
+    $bg: #b32424;
+    margin: 0 auto;
+    width: 990px;
+    /* logo_box */ 
+    .W_top {
+        height: 115px;
+        a {
+            display: inline-block;
+            margin-top: 52px;
+        }
+    }
+    .W_box {
+        margin-top: 40px;
+        padding: 50px 0;
+        width: 990px;
+        height: 602px;
+        background: #fff;
+        border: 1px solid #f0f0f0;
+        h5 {
+            padding-bottom: 30px;
+            font-size: 28px;
+            color: #000;
+            font-weight: 400;
+            text-align: center;
+        }
+        /* form */ 
+        .content_box {
+            margin: 0 auto;
+            width: 338px;
+            height: 451px;
+            /* input_box */ 
+            .box {
+                font-size: 12px;
+                p {
+                    position: relative;
+                    margin-top: 15px;
+                    line-height: 38px;
+                    .icon {
+                        display: block;
+                        position: absolute;
+                        top: 11px;
+                        left: 11px;
+                        width: 13px;
+                        height: 16px;
+                        background: url(../image/a.png)
+                    }
+                    .icon-phone {background-position:-576px -25px;}
+                    .icon-note {background-position: -576px 0;}
+                    .icon-psd {background-position: -576px -51px;}
+                    .icon2 {
+                        display: block;
+                        position: absolute;
+                        top: 11px;
+                        right: 11px;
+                        width: 16px;
+                        height: 16px;
+                        background: url(../image/d.png)
+                    }
+                    .icon-eye-close {background-position: -142px -92px;}
+                    .icon-eye-open {background-position: -188px -137px;}
+                    input, button {
+                        padding-left: 35px;
+                        width:301px;
+                        height:38px;
+                        line-height: 38px;
+                        font-size: 12px;
+                        background: transparent;
+                        border: 1px solid #e8e8e8;
+                    }
+                    .min-input {width: 193px;}
+                    .r_stext {
+                        float: right;
+                        padding-left: 0;
+                        width: 98px;
+                        height: 40px;
+                        font-size: 14px;
+                        color: #999;
+                    }
+                }
+                /* tips */ 
+                i {
+                    display: none;
+                    padding-left: 18px;
+                    margin: 8px 0 7px;
+                    font-size:10px;
+                    line-height:16px;
+                    font-weight: 700;
+                    color: $bg;
+                    background: url(../image/icon-a-error-icon.png) no-repeat;
+                }
+            }
+            .register{
+                display: block;
+                margin: 35px 0 0;
+                width:340px;
+                height:38px;
+                line-height: 38px;
+                font-size: 14px;
+                color: #fff;
+                text-align: center;
+                background: $bg;
+                border: none;   
+            }
+            .condition {
+                padding-bottom: 20px;
+                line-height: 38px;
+                font-size:12px;
+                color: #999;
+            }
+        }
+    }
+}
