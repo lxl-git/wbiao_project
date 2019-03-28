@@ -3,32 +3,31 @@ var connect = require('gulp-connect');
 var sass = require('gulp-sass');
 sass.compiler = require('node-sass');
 
-
-
-gulp.task('default', ['server','sass','watch']);
-
 gulp.task('sass', function () {
-  return gulp.src('app/sass/*.scss')
+  return gulp.src('app/sass/**/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('app/css'))
-    
+    .pipe(gulp.dest('dist/css'));
 });
  
-// gulp.task('allFile', function() {
-//   gulp.src(['app/**/*', '!app/sass/**/*'])
-//   .pipe(gulp.dest('dist'))
-//   .pipe(connect.reload());
-// })
+gulp.task('default', ['allFile','server', 'watch', 'sass']);
 
-gulp.task('watch', function() {
-  gulp.watch('app/sass/*.scss', ['sass']);
+gulp.task('allFile', function() {
+  gulp.src(['app/**/*', '!app/sass/**/*'])
+  .pipe(gulp.dest('dist'))
+  .pipe(connect.reload());
 })
 
-gulp.task('server', function() {   //开启服务器
+gulp.task('watch', function() {
+  gulp.watch(['app/**/*'], ['allFile']);
+  gulp.watch('app/sass/**/*.scss', ['sass']);
+
+})
+
+gulp.task('server', function() {
   connect.server({
-    root: './app', //设置根目录
+    root: 'dist', //设置根目录
     livereload: true, // 是否热更新
-    port: 7777
+    port: 8888
   });
 })
 

@@ -13,6 +13,19 @@ var shopping =(function(){
             $box = $('.x_x');
         },
         shopping_show(data){
+            var show_wu =$('.main_show_box');
+            var show_you = $('.main_show_shopping');
+            
+            //判断是否登入
+            var loadList = localStorage.phone;
+            if(loadList){
+                show_you.css('display','block');
+                show_wu.css('display','none');
+            }else if(!loadList){
+                show_you.css('display','none');
+                show_wu.css('display','block');
+            }
+
             data.forEach(x => {
                  var innerHTML = `
                  <div class="shopping_show_1">

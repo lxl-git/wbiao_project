@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/shop.css">
+    <script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.js"></script>
+    <script src="js/shop.js"></script>
+    <script src="js/jquery.jqzoom-core.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/fdj.css" type="text/css">
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <link rel="stylesheet" href="css/common.css">
+    <title>【万表网正品行货 全国联保!】江诗丹顿</title>
+    <style type"text css">
+        .zoomPad {
+    position:relative;
+    float:left;
+    z-index:99;
+    cursor:crosshair
+}
+.zoomPreload {
+    -moz-opacity:.8;
+    opacity:.8;
+    filter:alpha(opacity=80);
+    color:#333;
+    font-size:12px;
+    font-family:Tahoma;
+    text-decoration:none;
+    border:1px solid #ccc;
+    background-color:#fff;
+    padding:8px;
+    text-align:center;
+    background-image:url(../images/zoomloader.gif);
+    background-repeat:no-repeat;
+    background-position:43px 30px;
+    z-index:110;
+    width:90px;
+    height:43px;
+    position:absolute;
+    top:0;
+    left:0;
+    *width:100px;
+    *height:49px
+}
+.zoomPup {
+    overflow:hidden;
+    background-color:#fff;
+    -moz-opacity:.6;
+    opacity:.6;
+    filter:alpha(opacity=60);
+    z-index:120;
+    position:absolute;
+    border:1px solid #ccc;
+    z-index:101;
+    cursor:crosshair
+}
+.zoomOverlay {
+    position:absolute;
+    left:0;
+    top:0;
+    background:#fff;
+    z-index:5000;
+    width:100%;
+    height:100%;
+    display:none;
+    z-index:101
+}
+.zoomWindow {
+    position:absolute;
+    left:110%;
+    top:40px;
+    background:#fff;
+    z-index:6000;
+    height:auto;
+    z-index:10000;
+    z-index:110
+}
+.zoomWrapper {
+    position:relative;
+    border:1px solid #999;
+    z-index:110
+}
+.zoomWrapperTitle {
+    display:block;
+    background:#999;
+    color:#fff;
+    height:18px;
+    line-height:18px;
+    width:100%;
+    overflow:hidden;
+    text-align:center;
+    font-size:10px;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:120;
+    -moz-opacity:.6;
+    opacity:.6;
+    filter:alpha(opacity=60)
+}
+.zoomWrapperImage {
+    display:block;
+    position:relative;
+    overflow:hidden;
+    z-index:110
+}
+.zoomWrapperImage img {
+    border:0;
+    display:block;
+    position:absolute;
+    z-index:101
+}
+.zoomIframe {
+    z-index:-1;
+    filter:alpha(opacity=0);
+    -moz-opacity:.8;
+    opacity:.8;
+    position:absolute;
+    display:block
+}
+        body{margin:0px;padding:0px;font-family:Arial;}
+        a img,:link img,:visited img { border: none; }
+        table { border-collapse: collapse; border-spacing: 0; }
+        :focus { outline: none; }
+        *{margin:0;padding:0;}
+        p, blockquote, dd, dt{margin:0 0 8px 0;line-height:1.5em;}
+        fieldset {padding:0px;padding-left:7px;padding-right:7px;padding-bottom:7px;}
+        fieldset legend{margin-left:15px;padding-left:3px;padding-right:3px;color:#333;}
+        dl dd{margin:0px;}
+        dl dt{}
+        
+        .clearfix:after{clear:both;content:".";display:block;font-size:0;height:0;line-height:0;visibility:hidden;}
+        .clearfix{display:block;zoom:1}
+        
+        
+        ul#thumblist{display:block;}
+        ul#thumblist li{float:left;margin-right:2px;list-style:none;}
+        ul#thumblist li a{display:block;border:1px solid #CCC;}
+        ul#thumblist li a.zoomThumbActive{
+            border:1px solid #999;
+            box-shadow: 0 0 8px 1px rgba(119, 131, 131, 0.5);
+        }
+        
+        .jqzoom{
+        
+            text-decoration:none;
+            float:left;
+        }
+ 
+        </style>
+        <script type="text/javascript">
+
+            $(document).ready(function() {
+                $('.jqzoom').jqzoom({
+                        zoomType: 'innerzoom',
+                        preloadImages: false,
+                        alwaysOn:false
+                    });
+            });
+            </script>
+</head>
+<body>
+    <!--顶部公共样式-->
+    <div class="header"></div>
+    <div id="shop-head">
+        
+        <!--logo-->
+        <div id="logo">
+            <!--logo版心区-->
+            <div class="logo-con">
+                <!--左侧logo-->
+                <div class="con-left">
+
+                    <h1>
+                        <a class="h-logo" href="index.html">
+                            <img src="image/s-logo.png" alt="正品名表，终身服务">
+                        </a>
+                    </h1>
+
+                    <a class="cream" href="shop.html">
+                        <div class="cream-main">
+                            <p class="cr-one">精品品牌店
+                                <i>自营</i>
+                            </p>
+                            <p class="cr-two">
+                                销量
+                                <em>133448</em>&nbsp;&nbsp;粉丝
+                                <em>5485</em>
+                            </p>
+                        </div>
+                    </a>   
+                </div>
+                <!-- 右侧搜索 -->
+                <div class="con-right">
+                    <div class="right-search">
+                        <div class="searchForm">
+                            <label class="sea-lab">
+                                <span>搜索 品牌/系列/型号</span>
+                                <input type="text">
+                            </label>
+                            <button class="btnone">搜万表</button>
+                            <button class="btntwo">搜本店</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--banner-->
+        <a id="banner" href="">
+            <div style="background:url(image/s-banner.jpg) no-repeat center center" class="banner-div"></div>
+        </a>
+        <!--nav-->
+        <div style="background-color:#000000;" id="nav">
+            <ul>
+                <li><a class="on" href="">首页</a></li>
+                <li><a href="">商品</a></li>
+                <li><a href="">男士腕表</a></li>
+                <li><a href="">女生腕表</a></li>
+                <li><a href="">特价专区</a></li>
+                <div class="banner-right">
+                    <i class="iconfont icon-xinxi2"></i>
+                    <span>联系商家</span>
+                </div>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="big-nav">
+        <div class="bread">
+            <div class="bread-left">
+                <a href="">首页</a>
+                <a href="">></a>
+                <a href="">江诗丹顿</a>
+                <a href="">></a>
+                <a href="">江诗丹顿-传承系列 80172/000P-9589 机械男表</a>
+            </div>
+            <div class="bread-right">
+                <span class="right-a">自营</span>
+                <span class="right-b">
+                    <a href="">精英精品店</a>
+                </span>
+                <span class="right-c">+</span>
+                <span class="right-d">关注</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="main-con">
+            <div class="upper">
+                <div class="upper-left">
+                        <div class="clearfix" id="content" style=" height:480px;width:480px;">
+                                <div class="clearfix"> <a style="border:1px solid #ccc" href="./image/triumph_big1.jpg" class="jqzoom" rel='gal1' title="万表(WBiao)"> <img  style="width:500px;height:500px;"src="./image/triumph_small1.jpg"style="border: 4px solid #666;"title="WBiao"> </a>
+                                    </select>
+                                </div>
+                                <br />
+                                <div class="clearfix">
+                                <ul id="thumblist" class="clearfix">
+                                <li style="margin-right:8px;"><a class="zoomThumbActive" href='javascript:void(0);' rel="{gallery: 'gal1', smallimage: './image/triumph_small1.jpg',largeimage: './image/triumph_big1.jpg'}"><img style="width:78px;height:78px;" src='./image/triumph_thumb1.jpg'></a></li>
+                                <li><a href='javascript:void(0);' rel="{gallery: 'gal1', smallimage: './image/triumph_small2.jpg',largeimage: './image/triumph_big2.jpg'}"><img  style="width:78px;height:78px;"src='./image/triumph_thumb2.jpg'></a></li>
+                                </ul>
+                                </div>
+                                </div>
+                </div>
+                <div class="upper-right">
+                    <div class="title">江诗丹顿-传承系列 80172/000P-9589 机械男表</div>
+                    <div class="upper-more">
+                        万年历腕表 物有所值
+                        <span>了解更多>></span>
+                    </div>
+                    <div class="model">
+                        <div class="model-a">
+                            <span>型号:</span>
+                            <span>80172/000P-9589</span>
+                        </div>
+                        <div class="model-b">
+                            <span>编号</span>
+                            <span>10642</span>
+                        </div>
+                        <div class="model-c">
+                            <span>品牌</span>
+                            <span>江诗丹顿</span>
+                        </div>
+                        <div class="model-d">
+                            <span>销量</span>
+                            <span>0</span>
+                        </div>
+                    </div>
+                    <div class="upper-price">
+                        <div class="price-money">
+                            <div class="money-left">万表价</div>
+                            <div class="money-right">
+                                <span class="money-a">￥</span>
+                                <span class="money-b">4576000</span>
+                                <span class="money-c">￥5200000</span>
+                            </div>
+                        </div>
+                        <div class="price-stage">
+                            <div class="stages-left">分期</div>
+                            <div class="stages-right">
+                                <span class="stages-a">
+                                    每月
+                                    <i class="satges-i">381333.3</i>
+                                    元×12期
+                                </span>
+                                <span class="stages-b">(免息免手续费)</span>
+                            </div>
+                            <div></div>
+                        </div>
+                        <div class="price-ticket">
+                            <div class="tick-left">领券</div>
+                            <div class="tick-right">
+                                <div class="tick-a">
+                                    <div class="item tick-a-a"></div>
+                                    <div class="item tick-a-b">
+                                        ￥1688现金券
+                                    </div>
+                                    <div class="item tick-a-c"></div>
+                                </div>
+
+                                <span class="tick-span">更多</span>
+                                <div class="tick-b tick-none iconfont icon-triangle-copy-copy-copy"></div>
+                                <div class="tick-c tick-none">
+                                    <div class="tick-c-a">
+                                        <span class="span-a iconfont icon-youhuiqua">￥1668</span>
+                                        <span class="span-b">
+                                            <div class="text">现金券</div>
+                                            <div class="texttwo">2019.03.11-2019.04.01</div>
+                                        </span>
+                                        <span class="span-c">领取</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="give">
+                        <div class="give-left">配送</div>
+                        <div class="give-right">
+                            <i>(顺丰包邮)</i>
+                            预计5-10个工作日内发货
+                        </div>
+                    </div>
+                    <div class="promise">
+                        <div class="left">承诺</div>
+                        <div class="right">
+                            <li class="f1">
+                                <i></i>
+                                <span>正品保障</span>
+                                <div class="popup">全站自营直采，高于瑞士国家标准的进出仓全检机制，万表7年零假货投诉。</div>
+                            </li>
+                            <li class="f1">
+                                <i></i>
+                                <span>正品保障</span>
+                                <div class="popup">全站自营直采，高于瑞士国家标准的进出仓全检机制，万表7年零假货投诉。</div>
+                            </li>
+                            <li class="f1">
+                                <i></i>
+                                <span>正品保障</span>
+                                <div class="popup">全站自营直采，高于瑞士国家标准的进出仓全检机制，万表7年零假货投诉。</div>
+                            </li>
+                            <li class="f1">
+                                <i></i>
+                                <span>正品保障</span>
+                                <div class="popup">全站自营直采，高于瑞士国家标准的进出仓全检机制，万表7年零假货投诉。</div>
+                            </li>
+                            <li class="f1">
+                                <i></i>
+                                <span>正品保障</span>
+                                <div class="popup">全站自营直采，高于瑞士国家标准的进出仓全检机制，万表7年零假货投诉。</div>
+                            </li>
+                            <li class="f1">
+                                <i></i>
+                                <span>正品保障</span>
+                                <div class="popup">全站自营直采，高于瑞士国家标准的进出仓全检机制，万表7年零假货投诉。</div>
+                            </li>
+                            <li class="f1">
+                                <i></i>
+                                <span>正品保障</span>
+                                <div class="popup">全站自营直采，高于瑞士国家标准的进出仓全检机制，万表7年零假货投诉。</div>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="service">
+                        <div class="left">服务</div>
+                        <div class="right">
+                            <a href="">
+                                <span>名匠保修</span>
+                                <i class="iconfont icon-xiayiye"></i>
+                            </a>
+                            <div class="servicePopup">该产品享有2年名匠保修服务</div>
+                        </div>
+                    </div>
+                    <div class="style">
+                        <div class="style-left">款式</div>
+                        <div class="style-right">
+                            <a class="fone" href="">
+                                <span class="right-img">
+                                    <img src="image/s-shop.jpg" alt="">
+                                </span>
+                                <span class="right-text">真皮 白色 鳄鱼皮</span>
+                                <div class="tag"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="number">
+                        <div class="number-left">数量</div>
+                        <div class="number-right">
+                            <div class="right-a">
+                                <span class="reduce">-</span>
+                                <input class="cont" type="text"value="1">
+                                <span class="plus">+</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <div class="button-a">立即购买</div>
+                        <div class="button-b">加入购物车</div>
+                        <div class="button-code">
+                            <p class="pone iconfont icon-erweima"></p>
+                            <p class="text">手机购买</p>
+                            <div class="code-popup">
+                                <img src="image/s-ma.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+            <div class="lower">
+                <div class="lower-left">
+                   <div class="shop">
+                       <div class="title">精英品牌店</div>
+                       <div class="content">
+                           <div class="content-logo">
+                               <a class="shop-img" href="">
+                                   <img src="image/s-s.jpg" alt="">
+                               </a>
+                               <div class="shop-text">自营</div>
+                           </div>
+                           <div class="content-product">
+                               <div class="divone">
+                                   <span class="spanone">全部商品</span><span class="spantwo">721</span>
+                               </div>
+                               <div class="divone">
+                                   <span class="spanone">累计销量</span><span class="spantwo">66552</span>
+                               </div>
+                               <div class="divone">
+                                   <span class="spanone">关注数</span><span class="spantwo">1458</span>
+                               </div>
+                           </div>
+                           <div class="content-name">
+                               <div class="name-a">
+                                   <span class="iconfont icon-dianpu span-one"></span>
+                                   <span class="span-two"><a href="">进店逛逛</a></span>
+                                   <span class="span-three"></span>
+                                   <span class="span-four"><a href="">联系客服</a></span>
+                               </div>
+                           </div>
+                       </div>
+                   </div> 
+                   <div class="search">
+                       <div class="title">店内搜索</div>
+                       <div class="content">
+
+                           <div class="word">
+                               <div class="word-left">关键字</div>
+                               <div class="word-right"><input class="inp" type="text"></div>
+                           </div>
+
+                           <div class="word">
+                            <div class="word-left">价格区间</div>
+                            <div class="word-price">
+                                <span><input type="text" name="" id=""></span>
+                                <span class="price_">-</span>
+                                <span><input type="text" name="" id=""></span>
+                            </div>
+                           </div>
+                           <div class="button">搜索</div>
+                       </div>
+                   </div>
+                </div>
+                <div class="lower-right">
+
+                    <div class="right-title">
+                        <div class="title-con">
+                            <li class="on"value="1">商品详情</li>
+                            <li value="2">规格参数</li>
+                            <li value="3">售后服务</li>
+                            <li value="4">线下体验</li>
+                            <li value="5">评价(0)</li>
+                        </div>
+                    </div>
+
+                    <div class="right-content">
+                        <!--商品详情-->
+                        <div class="content-one">
+                            <div class="prompt">
+                                <div class="prA">温馨提示</div>
+                                <div class="prB">商品展示区划去的价格为品牌建议零售价，并非原价；万表价为商品实时售价，欢迎比较购买！</div>
+                            </div>
+                            <div>
+                                <img src="image/s-xq4.jpg" alt="">
+                            </div>
+                            <div class="main">
+                                <img src="image/s-xq1.jpg" alt="">
+                                <img src="image/s-xq2.jpg" alt="">
+                                <img src="image/s-xq3.jpg" alt="">
+                            </div>
+                            <div class="explain">
+                                <div class="explain-a">价格说明</div>
+                                <div class="explain-b">
+                                    <span>划线价</span>
+                                    商品展示的划线价或参考价可能是品牌专柜价、商品吊牌价或由品牌供应商提供的正品零售价（如厂商指导价、建议零售价等）
+                                    或该商品在万表上曾经展示过的销售价；由于地区、时间的差异性和市场行情波动，品牌专柜标价、商品吊牌价等可能会与您购物时展示的不一致，该价格仅供您参考。
+                                    <br>
+                                    <span>折扣:</span>
+                                    如无特殊说明，促销价是销售商在参考价基础上给予的优惠比例/优惠金额。如有疑问，您可以在购买前与客服联系。
+                                    <br>
+                                    异常问题：因可能存在系统缓存、页面更新延迟等不确定性情况，导致价格显示异常，商品具体售价请以订单结算页价格为准。如您发现异常情况出现，请立即联系我们补正，以便您能顺利购物。
+                                </div>
+                            </div>
+                        </div>
+                        <!--规格参数-->
+                        <div class="content-two">
+                            <div class="prompt">
+                                    <div class="prA">温馨提示</div>
+                                    <div class="prB">商品展示区划去的价格为品牌建议零售价，并非原价；万表价为商品实时售价，欢迎比较购买！</div>
+                            </div>
+                            <div class="format">
+                                <div class="format-top">真皮 白色 鳄鱼皮－规格参数</div>
+                                <div class="format-two">
+                                    <div class="twoA">腕表机芯</div>
+                                    <div class="two-right">
+                                        <div class="right-A">
+                                            <span class="spanone">机芯类型</span>
+                                            <span class="spantwo">机械</span><br>
+                                        </div>
+                                        <div class="right-A">
+                                            <span class="spanone">机芯型号</span>
+                                            <span class="spantwo">calibre 2755 动力储存（小时）： 58左右</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="format-two">
+                                    <div class="twoA">腕表外壳</div>
+                                    <div class="two-right">
+                                        <div class="right-A">
+                                            <span class="spanone">外壳材质</span>
+                                            <span class="spantwo">铂金</span><br><br>
+                                            <span class="spanone">触摸手感</span>
+                                            <span class="spantwo">金属</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="format-two">
+                                    <div class="twoA">腕表表盘</div>
+                                    <div class="two-right">
+                                        <div class="right-A">
+                                            <span class="spanone">表盘宽度</span>
+                                            <span class="spantwo">44mm</span><br><br>
+                                            <span class="spanone">表盘厚度</span>
+                                            <span class="spantwo">13.66mm</span><br><br>
+                                            <span class="spanone">表冠</span>
+                                            <span class="spantwo">普通</span><br><br>
+                                            <span class="spanone">表面材质</span>
+                                            <span class="spantwo">蓝宝石水晶</span><br><br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--售后服务-->
+                        <div class="content-three">
+                            <div class="prompt">
+                                    <div class="prA">温馨提示</div>
+                                    <div class="prB">商品展示区划去的价格为品牌建议零售价，并非原价；万表价为商品实时售价，欢迎比较购买！</div>
+                            </div>
+                            <div><img src="image/s-xq.png" alt=""></div>
+                        </div>
+                        <!-- 线下体验 -->
+                        <div class="content-four">
+                            <div class="four-left">
+                                <img src="image/s-xqone.jpg" alt="">
+                            </div>
+                            <div class="four-right">
+                                <p class="pone">万表全球名表体验中心-广州总部</p>
+                                <p class="ptwo">查看地图</p>
+                                <p class="pthree">广州市番禺区大石街番禺大道北60-1号</p>
+                                <p class="ptwo">联系电话：</p>
+                                <p class="pthree">400-883-2688</p>
+                                <p class="ptwo">主营品牌：</p>
+                                <p class="pthreep">天梭  欧米茄  浪琴  劳力士  万国  江诗丹顿  百达翡丽  美度  赫柏林  迪沃斯  库尔沃  爱宝时  艾美达  莫勒  柏高  亨利慕时</p>
+                                <a  class="pfour"href="">查看更多门店>></a>
+                            </div>
+                            <div class="four-left">
+                                <img src="image/s-cq.jpg" alt="">
+                            </div>
+                            <div class="four-right">
+                                <p class="pone">万表城市体验店-重庆</p>
+                                <p class="ptwo">查看地图</p>
+                                <p class="pthree">福建省福州市台江区江滨西大道100号融侨中心2层2015-1 店</p>
+                                <p class="ptwo">联系电话：</p>
+                                <p class="pthree">0591-87327880</p>
+                                <p class="ptwo">主营品牌：</p>
+                                <p class="pthreep">天梭 赫柏林 菲拉格慕 迪沃斯 库尔沃 爱宝时 柏高</p>
+                                <a  class="pfour"href="">查看更多门店>></a>
+                            </div>
+                        </div>
+                        <!--商品评价-->
+                        <div class="content-five">商品暂无评价喔,赶紧买一个吧</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ajax导入的尾部 -->
+    <div class="footer"></div>
+    <script src="js/api.js"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>

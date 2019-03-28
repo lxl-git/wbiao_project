@@ -98,13 +98,12 @@ header .w_header_left {
 header .w_header_right {
   padding-left: 25px;
   box-sizing: border-box;
-  width: 532px;
+  width: 600px;
   height: 28px;
   float: right; }
 
 .top_right_left {
   float: left;
-  width: 203px;
   height: 28px; }
 
 .top_rifht_left_a1 {
@@ -120,7 +119,7 @@ header .w_header_right {
   float: right;
   text-align: right;
   height: 25px;
-  width: 123px;
+  width: 130px;
   margin: 0 10px;
   color: #ae0f17; }
 
