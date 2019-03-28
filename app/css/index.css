@@ -40,7 +40,7 @@ body {
 .head_cont {
   float: left;
   width: 392px;
-  height: 38px;
+  height: 38px; 
   margin-top: 37.5px;
   position: relative; }
 
@@ -458,6 +458,7 @@ body {
   width: 99999px;
   height: 460px;
   position: relative;
+  cursor: pointer;
   left: 0;
   top: 0; }
 
@@ -465,15 +466,18 @@ body {
   width: 100vw;
   float: left;
   height: 460px;
+  cursor: pointer;
   overflow: hidden; }
 
 .banner-show li a {
   display: block;
+  cursor: pointer;
   overflow: hidden; }
 
 .banner-show li a img {
   height: 100%;
   position: relative;
+  cursor: pointer;
   left: -300px; }
 
 .banner_list {
