@@ -36,19 +36,30 @@ var $top_aaa = (function(){
             })
         },
         logdr(){
+            
             let $top_rifht_left_a1= $('.top_rifht_left_a1');
             let $top_right_Left_a2 = $('.top_right_Left_a2');
             var phone = localStorage.getItem('phone');
             if(phone){
-                $top_rifht_left_a1.text('');
-                $top_rifht_left_a1.css('width','0');
+                $top_rifht_left_a1.text('退出');
+                $top_rifht_left_a1.addClass('.top_del')
+                $top_rifht_left_a1.css('float','right');
                 $top_right_Left_a2.text('用户  '+phone);
-                $top_right_Left_a2.css({'width':'159px','font-weight':'700','color':'#cc9952'});
+                $top_right_Left_a2.css({'width':'130px','font-weight':'700','color':'#cc9952'});
             }else{
                 $top_rifht_left_a1.text('请登录');
+                $top_rifht_left_a1.removeClass('top_del');
+                $top_rifht_left_a1.css('float','left');
                 $top_right_Left_a2.text('注册即送3500元大礼包');
                 $top_rifht_left_a1.css('width','36px');
                 $top_right_Left_a2.css({'width':'125px','font-weight':'400','color':'rgb(174, 15, 23)'});
+            }   
+            if($top_rifht_left_a1.hasClass('top_del')){
+                $del = $('.top_del');
+                $del.on('click',function(){
+                    localStorage.removeItem('phone');
+                    location.reload();
+                })
             }
         }
     }

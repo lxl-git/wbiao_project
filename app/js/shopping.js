@@ -13,6 +13,19 @@ var shopping =(function(){
             $box = $('.x_x');
         },
         shopping_show(data){
+            var show_wu =$('.main_show_box');
+            var show_you = $('.main_show_shopping');
+            
+            //判断是否登入
+            var loadList = localStorage.phone;
+            if(loadList){
+                show_you.css('display','block');
+                show_wu.css('display','none');
+            }else if(!loadList){
+                show_you.css('display','none');
+                show_wu.css('display','block');
+            }
+
             data.forEach(x => {
                  var innerHTML = `
                  <div class="shopping_show_1">
@@ -120,19 +133,19 @@ var shopping =(function(){
                    $(this).addClass('ion');
                    num += $zong.text()-0;
                    $age_num.text(num); 
-                    age_age = $(this).siblings('.show_input').children('.num_btn');
-                    age_age_num += age_age.val()-0;
-                    jisu += age_age.val()-0;
-                    $cont_bottom.text(age_age_num);
+                    // age_age = $(this).siblings('.show_input').children('.num_btn');
+                    // age_age_num += age_age.val()-0;
+                    // jisu += age_age.val()-0;
+                    // $cont_bottom.text(age_age_num);
                 }else{ 
                     $(this).removeClass('ion');
                     $allrng.removeClass('ion');
                     $allig.removeClass('ion');
                     $allwe.removeClass('ion');
-                    age_age_num -= age_age.val()-0;
-                    $cont_bottom.text(age_age_num);
+                    // age_age_num -= age_age.val()-0;
+                    // $cont_bottom.text(age_age_num);
                     num -= $zong.text()-0;
-                    jisu -= age_age.val()-0;
+                    // jisu -= age_age.val()-0;
                     $age_num.text(num);
                 }
             })
