@@ -4,7 +4,7 @@
     $password = $_POST['password'];
     echo $phone;
     echo $password; 
-    $sql = "select phone, password from user where phone = '13824382438' and password = '12345a'";
+    $sql = "select phone, password from user where phone = '$phone' and password = '$password'";
     $db = new DB();
     $result = $db->fetch($sql, 'object');
     // var_dump($sql);
@@ -20,4 +20,3 @@
         </script>";
     }
 ?>
-

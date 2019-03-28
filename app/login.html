@@ -19,7 +19,7 @@
     <!-- login_box -->
     <div id="W_box">
         <div class="W_box_content">
-            <form method="POST" action="http://localhost/server/login.php" class="content_box">
+            <form onsubmit="return false" class="content_box">
                 <!-- logo_tab -->
                 <div class="logo_tab">
                     <span>会员登录</span>
@@ -30,7 +30,7 @@
                     <div class="box">
                         <p>
                             <em class="icon icon-phone"></em>
-                            <input type="text" name="phone" placeholder="请输入手机号码">
+                            <input type="text" placeholder="请输入手机号码">
                             <i>请输入正确手机号码</i>
                         </p>
                     </div>
@@ -53,7 +53,7 @@
                         <!-- <i>请输入验证码</i> -->
                     </div>
                     <!-- reg_btn -->
-                    <button type="submit" class="login">立即登录</button>
+                    <button type="submit" class="login login_pho">立即登录</button>
                     <a href="./register.html">免费注册</a>
                 </div>
                 <!-- login_way_code -->
@@ -90,20 +90,16 @@
                     </div>
                     <input type="hidden" id="">
                     <!-- reg_btn -->
-                    <button type="submit" class="login">立即登录</button>
+                    <button type="submit" class="login log_pas">立即登录</button>
                     <a href="./register.html" class="left">免费注册</a>
                     <a href="./register.html" class="right">忘记密码</a>
                 </div>
                 <p class="pos">
-                    <!-- <p class="pos">
                         <a href="javascript:void(0);">
                             手机动态码登录
                             <em class="icon_hot"></em>
                         </a>
-                        <em>|</em>
-                        <a href="javascript:void(0);">社交登录</a>
-                    </p> -->
-                    <a href="javascript:void(0);">账号密码</a>
+                    <!-- <a href="javascript:void(0);">账号密码</a> -->
                     <em>|</em>
                     <a href="javascript:void(0);">社交登录</a>
                 </p>
@@ -119,5 +115,6 @@
         </p>
     </div>
     <script  data-main="./js/login.js" src="https://cdn.bootcss.com/require.js/2.3.5/require.min.js"></script>
+
 </body>
 </html>

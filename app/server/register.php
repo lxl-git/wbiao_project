@@ -9,7 +9,7 @@
     if($result) {
         echo "<script>
                 alert('注册成功，正在跳转');
-                location.href = 'http://localhost:7777/login.html';
+                location.href = '';
             </script>";
     }else{
         echo "<script>
