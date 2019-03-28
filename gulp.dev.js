@@ -18,6 +18,7 @@ gulp.task('allFile', function() {
 })
 
 gulp.task('watch', function() {
+  // '!app/sass/**/*'
   gulp.watch(['app/**/*'], ['allFile']);
   gulp.watch('app/sass/**/*.scss', ['sass']);
 })

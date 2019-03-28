@@ -9,13 +9,12 @@
     if($result) {
         echo "<script>
                 alert('注册成功，正在跳转');
-                location.href = '';
+                location.href = 'http://localhost/wbiao_project/dist/login.html'
             </script>";
     }else{
         echo "<script>
                 alert('由于网络原因，注册失败; 请重试');
-                location.href = 'http://localhost:7777/register.html';
+                location.href = 'http://localhost/wbiao_project/dist/register.html'
         </script>";
     }
 ?>
-

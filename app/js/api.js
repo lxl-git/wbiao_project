@@ -1,4 +1,4 @@
-define(function(api) {
+define(function (api) {
     return {
         $All(ele) {
             return document.querySelectorAll(ele);
