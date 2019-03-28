@@ -33,6 +33,7 @@ gulp.task('miniCss', function() {
   .pipe(rev())
   .pipe(gulp.dest('dist'))
   .pipe(rev.manifest())
+<<<<<<< HEAD
   .pipe(gulp.dest('rev/css')) 
 })
 
@@ -50,4 +51,7 @@ gulp.task('miniJs', function () {
 
 gulp.task('del', function() {
 del(['dist']);
+=======
+  .pipe(gulp.dest('rev')) 
+>>>>>>> watch
 })
