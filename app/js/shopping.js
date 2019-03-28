@@ -120,19 +120,19 @@ var shopping =(function(){
                    $(this).addClass('ion');
                    num += $zong.text()-0;
                    $age_num.text(num); 
-                    age_age = $(this).siblings('.show_input').children('.num_btn');
-                    age_age_num += age_age.val()-0;
-                    jisu += age_age.val()-0;
-                    $cont_bottom.text(age_age_num);
+                    // age_age = $(this).siblings('.show_input').children('.num_btn');
+                    // age_age_num += age_age.val()-0;
+                    // jisu += age_age.val()-0;
+                    // $cont_bottom.text(age_age_num);
                 }else{ 
                     $(this).removeClass('ion');
                     $allrng.removeClass('ion');
                     $allig.removeClass('ion');
                     $allwe.removeClass('ion');
-                    age_age_num -= age_age.val()-0;
-                    $cont_bottom.text(age_age_num);
+                    // age_age_num -= age_age.val()-0;
+                    // $cont_bottom.text(age_age_num);
                     num -= $zong.text()-0;
-                    jisu -= age_age.val()-0;
+                    // jisu -= age_age.val()-0;
                     $age_num.text(num);
                 }
             })
