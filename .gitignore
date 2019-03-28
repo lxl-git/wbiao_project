@@ -1,9 +1,0 @@
-dist/
-node_modules/
-package-lock.json
-.vscode/
-gulp.build.js
-gulp.dev.js
-gulpfile.js
-package.json
-sass/
