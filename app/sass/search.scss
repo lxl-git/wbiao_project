@@ -519,7 +519,7 @@ html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img,input {
 
 //内容区
 #s-main{
-    height:6778px;
+    height:3000px;
     .top{
         width: 1200px;
         height:36px;
@@ -563,13 +563,14 @@ html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img,input {
 
     .main{
         width: 1200px;
-        height: 6724px;
+        // height: 6724px;
+        height: 2800px;
         // background:yellow;
         margin: 0 auto;
         //网页左侧内容
         .main-left{
             width: 210px;
-            height: 4802.6px;
+            height: 2680.6px;
             border: 1px solid #ccc;
             float: left;
 
@@ -948,7 +949,8 @@ html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img,input {
         //网页右侧内容
         .main-right{
             width:970px ;
-            height: 6724px;
+            // height: 6724px;
+            height: 2800px;;
             // border: 1px solid #ccc;
             float: right;
                 //网页右侧内容区 第一部分

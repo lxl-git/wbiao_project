@@ -160,32 +160,32 @@ $(document).ready(function () {
                 // $('.clearfix').html('');
                 data.forEach(x => {
                     console.log(x)
-                    var htmlCon = `
-                        <li>
-                        <a class="show-img" target="_blank" href="shop.html">
-                            <img src="" alt="">
-                        </a>
-                        <div class="goods_txt">
-                            <p class="prc">
-                                <span class="s-prc">
-                                    ￥
-                                    <em>${x.price}</em>
-                                </span>
-                                <del>￥4576000</del>
-                            </p>
-                            <a class="des" href="">${x.title}</a>
-                            <div class="sale">
-                                <span class="sale_tip">80小时动储/</span>
-                                <em class="sale_num">销量6089</em>
-                            </div>
-                            <a class="s-shop" href="">天梭TISSOT</a>
-                            <p class="tag">
-                                <span>自营</span>
-                            </p>
+                    // var htmlCon = `
+                    //     <li>
+                    //     <a class="show-img" target="_blank" href="shop.html">
+                    //         <img src="" alt="">
+                    //     </a>
+                    //     <div class="goods_txt">
+                    //         <p class="prc">
+                    //             <span class="s-prc">
+                    //                 ￥
+                    //                 <em>${x.price}</em>
+                    //             </span>
+                    //             <del>￥4576000</del>
+                    //         </p>
+                    //         <a class="des" href="">${x.title}</a>
+                    //         <div class="sale">
+                    //             <span class="sale_tip">80小时动储/</span>
+                    //             <em class="sale_num">销量6089</em>
+                    //         </div>
+                    //         <a class="s-shop" href="">天梭TISSOT</a>
+                    //         <p class="tag">
+                    //             <span>自营</span>
+                    //         </p>
                             
-                        </div>
-                    </li>`
-                     $('.clearfix').append(htmlCon);//把li 加到 ul
+                    //     </div>
+                    // </li>`
+                    //  $('.clearfix').append(htmlCon);//把li 加到 ul
                 })
             }
         }
