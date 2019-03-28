@@ -1,17 +1,4 @@
 $(document).ready(function () {
-    // $('.left-two').on('mouseenter','.consult',function(){
-    //     $(this).addClass('Add').siblings('li').removeClass('Add');
-    //     $('.left-four').css("height","336px")
-    //     $('.two-one').css("display","none")
-    //     $('.two-two').css("display","block")
-    // })
-    // $('.left-two').on('mouseenter','.acc',function(){
-    //     $(this).addClass('Add').siblings('li').removeClass('Add');
-    //     $('.left-four').css("height","550px")
-    //     $('.two-one').css("display","none")
-    //     $('.two-two').css("display","block")
-    // })
-
     $('.left-four').on('mouseenter', '.consult', function () {
         $(this).addClass('Add').siblings('li').removeClass('Add');
         $('.left-four').css("height", "336px")
@@ -153,6 +140,12 @@ $(document).ready(function () {
             getShopData() {
                 $.getJSON('../json/json.json', data => {
                     this.insertData(data);
+                    $('.show-img').click(function(){
+                        localStorage.uid = this.id;
+                        localStorage.title = this.name;
+                        localStorage.price = this.title;
+                        console.log(this.title)
+                    })
                 })
             },
             insertData(data) {
@@ -160,36 +153,38 @@ $(document).ready(function () {
                 // $('.clearfix').html('');
                 data.forEach(x => {
                     console.log(x)
-                    // var htmlCon = `
-                    //     <li>
-                    //     <a class="show-img" target="_blank" href="shop.html">
-                    //         <img src="" alt="">
-                    //     </a>
-                    //     <div class="goods_txt">
-                    //         <p class="prc">
-                    //             <span class="s-prc">
-                    //                 ￥
-                    //                 <em>${x.price}</em>
-                    //             </span>
-                    //             <del>￥4576000</del>
-                    //         </p>
-                    //         <a class="des" href="">${x.title}</a>
-                    //         <div class="sale">
-                    //             <span class="sale_tip">80小时动储/</span>
-                    //             <em class="sale_num">销量6089</em>
-                    //         </div>
-                    //         <a class="s-shop" href="">天梭TISSOT</a>
-                    //         <p class="tag">
-                    //             <span>自营</span>
-                    //         </p>
+                    var htmlCon = `
+                        <li>
+                        <a class="show-img" id="${x.uid}" name="${x.title}" title="${x.price}" href="shop.html">
+                            <img src="image/${x.img}" alt="">
+                        </a>
+                        <div class="goods_txt">
+                            <p class="prc">
+                                <span class="s-prc">
+                                    ￥
+                                    <em>${x.price}</em>
+                                </span>
+                                <del>￥4576000</del>
+                            </p>
+                            <a class="des" href="">${x.title}</a>
+                            <div class="sale">
+                                <span class="sale_tip">80小时动储/</span>
+                                <em class="sale_num">销量6089</em>
+                            </div>
+                            <a class="s-shop" href="">天梭TISSOT</a>
+                            <p class="tag">
+                                <span>自营</span>
+                            </p>
                             
-                    //     </div>
-                    // </li>`
-                    //  $('.clearfix').append(htmlCon);//把li 加到 ul
+                        </div>
+                    </li>`
+                     $('.clearfixA').append(htmlCon);//把li 加到 ul
                 })
             }
         }
     }())
     shop.getShopData();
+
+    
 })
 

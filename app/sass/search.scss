@@ -1265,7 +1265,7 @@ html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img,input {
                             height:1400px;
                             
                             //ul
-                            .clearfix{
+                            .clearfixA{
                                 margin-right: -8.6px;
                                 li:hover{
                                     box-shadow: 0 0 8px 1px rgba(119, 131, 131, 0.5);
@@ -1278,7 +1278,7 @@ html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img,input {
                                     overflow: hidden;
                                     float: left;
                                     margin: 10px 8.6px 10px 0;
-  
+                                    //展示图片的盒子
                                     .show-img{
                                         display: block;
                                         overflow: hidden;
@@ -1288,7 +1288,7 @@ html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img,input {
                                         position: relative;
                                         text-align: center;
                                         color: #666;
-
+                                        //图片
                                         img{
                                             height: 275px;
                                             width:275;
@@ -1301,7 +1301,7 @@ html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img,input {
                                             display: block;
                                         }
                                     }
-
+                                    //图片下方内容
                                     .goods_txt{
                                         margin: 0 16px;
                                         padding-bottom: 20px;
@@ -1433,7 +1433,11 @@ html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img,input {
                                 border-radius: 50%;
                                 border: 1px solid #fff;
                             }
-
+                            a:hover{
+                                border: 1px solid #666;
+                                background-color: #999;
+                                color: #fff;
+                            }
                             //鼠标移入时给span 和 a 添加背景颜色
                             .active{
                                 border: 1px solid #666;
