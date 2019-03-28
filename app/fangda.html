@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .box {
+      padding: 20px;
+    }
+
+    .show-image {
+      position: relative;
+      width: 360px;
+      font-size: 0;
+      border: 1px solid #ccc;
+      overflow: hidden;
+    }
+
+    .show-image img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .filter {
+      position: absolute;
+      left: 0px;
+      top: 0;
+      width: 150px;
+      height: 150px;
+      background: rgba(0, 0, 0, 0.6);
+      cursor: move;
+      display: none;
+    }
+
+    .img-box {
+      padding: 10px;
+    }
+
+    .img-box>li {
+      display: inline-block;
+      border: 1px solid transparent;
+      margin-left: 10px;
+      width: 78px;
+      height: 78px;
+    }
+
+    .img-box>li img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .img-box>li:hover,
+    .img-box>li.active {
+      border: 1px solid #000;
+    }
+
+    .show-big-image {
+      position: absolute;
+      left: 400px;
+      top: 20px;
+      width: 450px;
+      height: 450px;
+      overflow: hidden;
+      border: 1px solid #eee;
+      display: none;
+    }
+    .show-big-image img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1080px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="show-image">
+      <img src="image/s-xq1.jpg" alt="">
+      <span class="filter"></span>
+    </div>
+    <div class="show-big-image">
+      <img src="image/s-watchking.jpg" alt="" id="big-image">
+    </div>
+    <ul class="img-box">
+      <li class="active"><img src="image/s-one.jpg" alt=""></li>
+      <li><img src="image/s-two.jpg" alt=""></li>
+    </ul>
+  </div>
+  <script>
+    class Glass {
+      constructor(ele) {
+        this.$ele = ele;
+        if (typeof ele === 'string') {
+          this.$ele = document.querySelector(ele);
+        }
+        // 展示图片的盒子
+        this.$showImageBox = this.$ele.querySelector('.show-image');
+        // 展示的图片
+        this.$showImage = this.$showImageBox.querySelector('img');
+        // 过滤器
+        this.$filter = this.$showImageBox.querySelector('.filter');
+        // 展示大图的盒子
+        this.$showBigImageBox = this.$ele.querySelector('.show-big-image');
+        // 展示的大图片
+        this.$showBigImage = this.$showBigImageBox.children[0];
+        // 获取展示小图片盒子
+        this.$smallImageBox = this.$ele.querySelector('.img-box');
+        // 获取所有小图片
+        this.$smallImage = this.$smallImageBox.children;
+        this.addIndex();
+        this.event()
+      }
+      event() {
+        const self = this;
+        this.$showImageBox.onmouseenter = function (e) {
+          self.$filter.style.display = 'block';
+          self.$showBigImageBox.style.display = 'block';
+          // 获取鼠标位置
+        }
+        this.$showImageBox.onmousemove = function (e) {
+          e = e || window.event;
+          let X = e.pageX - self.$filter.offsetWidth / 2 - self.$showImageBox.offsetLeft;
+          let Y = e.pageY - self.$filter.offsetHeight / 2 - self.$showImageBox.offsetTop;
+          let maxX = self.$showImageBox.clientWidth - self.$filter.offsetWidth,
+            maxY = self.$showImageBox.clientHeight - self.$filter.offsetHeight;
+          // 判断合法性
+          if (X < 0) {
+            X = 0;
+          } else if (X > maxX) {
+            X = maxX;
+          }
+          if (Y < 0) {
+            Y = 0
+          } else if (Y > maxY) {
+            Y = maxY;
+          }
+          self.$filter.style.left = X + 'px';
+          self.$filter.style.top = Y + 'px';
+          self.$showBigImage.style.left = -3 * X + 'px';
+          self.$showBigImage.style.top = -3 * Y + 'px';
+
+        }
+        this.$showImageBox.onmouseleave = function () {
+          self.$filter.style.display = 'none';
+          self.$showBigImageBox.style.display = 'none';
+        }
+        this.$smallImageBox.onclick = function (e) {
+          // console.log(e.target.nodeName); 
+          if (e.target.nodeName == 'IMG') {
+            self.showImage(e.target.parentNode.index);
+          }
+        }
+      }
+      addIndex() {
+        // console.log(this.$smallImage);
+        for (let i = 0; i < this.$smallImage.length; i++) {
+          this.$smallImage[i].index = i;
+        }
+      }
+      showImage(index) {
+        console.log(index);
+        for (let i = 0; i < this.$smallImage.length; i++) {
+          this.$smallImage[i].classList.remove('active');
+        }
+        const $li = this.$smallImage[index];
+        $li.classList.add('active');
+        // 获取小图片的地址
+        let src = $li.children[0].getAttribute('src');
+        this.$showImage.src = src.replace('small', 'big');
+        this.$showBigImage.src = src.replace('small', 'largest');
+      }
+    }
+    var glass = new Glass('.box');
+    console.log(glass);
+  </script>
+</body>
+
+</html>

@@ -50,38 +50,52 @@ $('.title-con').on('click','li',function(){
         $('.content-five').css('display','block').siblings('div').css('display','none')
     }
 })
-// var $boxAll = document.querySelectorAll('.box');
-        // for (var i = 0; i < $boxAll.length; i++) {
-            // $boxAll[i].onclick = (function () {
-            //     var num = 0;
-            //     return function (e) {
-            //         e = e || window.event;
-            //         const target = e.target || e.which;
-            //         if (target.nodeName === 'BUTTON') {
-            //             if (target.className === 'add') {
-            //                 num++;
-            //             } else if (target.className === 'reset') {
-            //                 num = 0
-            //             }
-            //             this.querySelector('.count').innerHTML = num;
-
-            //         }
-            //     }
-            // }())
+            //点击加号减号，增加减少数量
             var num = 1;
-            $('.right-a').on('click','reduce',function(){
-                num+1
-                console.log(num)
-                // return function(){
-                //     if($(this).className == 'reduce'){
-                //         num-1
-                //     }
-                //     if($(this).className == 'plus'){
-                //         num+1
-                //     }
-                //     $(this).siblings('input').val() = num;
-                // }
-                
+            $('.right-a').on('click','.plus',function(){
+                num++
+                $('.cont').val(num);
             })
-        // }
+            $('.right-a').on('click','.reduce',function(){
+               num-- 
+               if(num<0){
+                    num = 0;
+                }
+                $('.cont').val(num);
+            })
+
+            //点击加入购物车，把数据放到本地存储
+            $('.button-b').click(function(){
+                // var arr = [];
+                var val = $('.cont').val()-0;
+                var title = $('.title').html();
+                var price = $('.money-b').html();
+                var uid = 1;
+                var obj = {val,title,price,uid};
+                // arr.push(obj);
+                localStorage.data = JSON.stringify(obj);
+                // var b = localStorage.data;
+                function setData(data){
+                    var listData = localStorage.listData || '[]';
+                    listData = JSON.parse(listData);
+                    var flag = true;
+                    for (var i = 0; i < listData.length; i++) {
+                        if (data.uid == listData[i].uid) {
+                            listData[i].val += data.val;
+                            flag = false;
+                            break;
+                        }
+                    }
+                    if (flag) {
+                        listData.push(data);
+                    }
+                    localStorage.listData = JSON.stringify(listData);
+            }
+            setData(obj)
+            console.log(localStorage.listData)
+        })
+
+            
+            
+
 })
