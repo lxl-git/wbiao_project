@@ -195,9 +195,10 @@ $(document).ready(function(){
             var val = $('.cont').val()-0;
             var title = $('.title').html();
             var price = $('.money-b').html();
+            var img = localStorage.img;
             var phone = localStorage.phone;
             var uid = localStorage.uid;
-            var obj = {val,title,price,uid,phone};
+            var obj = {val,title,price,uid,phone,img};
             // arr.push(obj);
             localStorage.data = JSON.stringify(obj);
             // var b = localStorage.data;
@@ -218,7 +219,6 @@ $(document).ready(function(){
                 localStorage.listData = JSON.stringify(listData);
         }
         setData(obj)
-        console.log(localStorage.listData)
     })
 
 

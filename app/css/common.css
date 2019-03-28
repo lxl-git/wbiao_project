@@ -98,7 +98,7 @@ header .w_header_left {
 header .w_header_right {
   padding-left: 90px;
   box-sizing: border-box;
-  width: 600px;
+  width: 620px;
   height: 28px;
   float: right; }
 
@@ -139,7 +139,9 @@ header .w_header_right {
   color: #cc5252;
   padding: 0 10px;
   font-weight: 700; }
-
+.top_right_cont{
+  width: 80px;
+}
 .top_box {
   position: relative;
   box-sizing: border-box; }
