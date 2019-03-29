@@ -144,6 +144,7 @@ $(document).ready(function () {
                         localStorage.uid = this.id;
                         localStorage.title = this.name;
                         localStorage.price = this.title;
+                        localStorage.img = this.type;
                         console.log(this.title)
                     })
                 })
@@ -155,7 +156,7 @@ $(document).ready(function () {
                     console.log(x)
                     var htmlCon = `
                         <li>
-                        <a class="show-img" id="${x.uid}" name="${x.title}" title="${x.price}" href="shop.html">
+                        <a class="show-img" id="${x.uid}" name="${x.title}" title="${x.price}" type="${x.img}" href="shop.html">
                             <img src="image/${x.img}" alt="">
                         </a>
                         <div class="goods_txt">

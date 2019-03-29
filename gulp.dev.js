@@ -11,7 +11,6 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('dist/css'));
 });
  
-
 gulp.task('allFile', function() {
   gulp.src(['app/**/*', '!app/sass/**/*', '!app/sass'])
   .pipe(gulp.dest('dist'))

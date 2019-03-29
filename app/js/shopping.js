@@ -3,7 +3,6 @@ var shopping =(function(){
     let $btn_left,$btn_right,$num_btn,$zong,$dan,$age_num,$box;
     return{
         init(){
-            this.json_show();
             
             // $num_btn = $('.num_btn');//文本框
             // $dan = $('.danjia'); // 单价
@@ -11,22 +10,35 @@ var shopping =(function(){
             $age_num = $('.age_num') // 
 
             $box = $('.x_x');
+            
+            this.shopping_show();
+            this.event();
         },
-        shopping_show(data){
+        shopping_show(){
+            $box.innerHTML = '';
+            var self = this;
             var show_wu =$('.main_show_box');
             var show_you = $('.main_show_shopping');
-            
+            var json_data;
             //判断是否登入
+            json_data =JSON.parse(localStorage.listData);
             var loadList = localStorage.phone;
             if(loadList){
-                show_you.css('display','block');
-                show_wu.css('display','none');
-            }else if(!loadList){
+                if(json_data.length-0>=1){
+                    show_you.css('display','block');
+                    show_wu.css('display','none');
+                }
+                else{
+                    show_you.css('display','none');
+                    show_wu.css('display','block');
+                }
+            }else
+            {
                 show_you.css('display','none');
-                show_wu.css('display','block');
+                show_wu.css('display','block');   
             }
 
-            data.forEach(x => {
+            json_data.forEach(x => {
                  var innerHTML = `
                  <div class="shopping_show_1">
                  <i class="rad ishow lpl"></i>
@@ -38,10 +50,10 @@ var shopping =(function(){
                  <div class="bottom_p1">¥<em class="danjia">${x.price}</em></div>
                  <div class="show_input">
                      <i class="btn_min">-</i>
-                     <input type="text" class="num_btn" value="${x.num}" readonly="readonly">
+                     <input type="text" class="num_btn" value="${x.val}" readonly="readonly">
                      <i class="btn_max">+</i>
                  </div>
-                 <p class="num_sss">¥<em class="zongjia">${x.price}</em></p>
+                 <p class="num_sss">¥<em class="zongjia">${x.price * x.val}</em></p>
                  <div class="show_btn">
                      <a href="javascript:;" class="del">删除</a>
                      <a href="javascript:;" class="yys">移入收藏</a>
@@ -50,6 +62,14 @@ var shopping =(function(){
                  `;
                  $box.append(innerHTML);
             });
+            $box.on('click','.del',function(){
+                let nnn= $(this).index('.del');
+                console.log(json_data[nnn])  
+                json_data.splice(nnn,1);
+                var string_json = JSON.stringify(json_data);
+                localStorage.listData = string_json ;
+                location.reload();
+            })
         },
         event(){
             $allrng = $('.rng'); // 全选1
@@ -133,62 +153,48 @@ var shopping =(function(){
                    $(this).addClass('ion');
                    num += $zong.text()-0;
                    $age_num.text(num); 
-                    // age_age = $(this).siblings('.show_input').children('.num_btn');
-                    // age_age_num += age_age.val()-0;
-                    // jisu += age_age.val()-0;
-                    // $cont_bottom.text(age_age_num);
+
                 }else{ 
                     $(this).removeClass('ion');
                     $allrng.removeClass('ion');
                     $allig.removeClass('ion');
                     $allwe.removeClass('ion');
-                    // age_age_num -= age_age.val()-0;
-                    // $cont_bottom.text(age_age_num);
                     num -= $zong.text()-0;
-                    // jisu -= age_age.val()-0;
                     $age_num.text(num);
                 }
             })
             //加减
-            let num_sui,age;
-            $btn_left.on('click',function(){
-                $num_btn = $(this).parent().parent().children('.show_input').children('.num_btn');
-                num_sui= $num_btn.val() - 1;
-                if(num_sui <= 1){
-                    num_sui = 1;
+            let num_sui,age,num_sux;
+            $box.on('click','.btn_min',function(){
+                var ngp = $(this).siblings('.num_btn');
+                num_sux = ngp.val()-0;
+                num_sux = num_sux - 1;
+                if(num_sux <= 1 ){
+                    num_sux = 1;
                 }
-                $num_btn.val(num_sui);
-                $dan =  $(this).parent().parent().children('.bottom_p1').children('.danjia');
-                $zong = $(this).parent().parent().children('.num_sss').children('.zongjia');
-                age = $dan.text() * $num_btn.val();
-                $zong.text(age);
+                let json_ss = JSON.parse(localStorage.listData);
+                let nnn= $(this).index('.btn_min');
+                json_ss[nnn].val=num_sux;
+                var string_json = JSON.stringify(json_ss);
+                localStorage.listData = string_json ;
+                ngp.val(num_sux);
             })
-            $btn_right.on('click',function(){
-                $num_btn = $(this).parent().parent().children('.show_input').children('.num_btn');
-                num_sui= $num_btn.val() - 0 +1;
-                if(num_sui <= 1){
-                    num_sui = 1;
+            $box.on('click','.btn_max',function(){
+                var ngp = $(this).siblings('.num_btn');
+                num_sui = ngp.val()-0;
+                num_sui = num_sui + 1;
+                if(num_sui >= 99 ){
+                    num_sui = 99;
                 }
-                $num_btn.val(num_sui);
-                $dan =  $(this).parent().parent().children('.bottom_p1').children('.danjia');
-                $zong = $(this).parent().parent().children('.num_sss').children('.zongjia');
-                age = $dan.text() * $num_btn.val();
-                $zong.text(age);
+                let json_ss = JSON.parse(localStorage.listData);
+                let nnn= $(this).index('.btn_max');
+                json_ss[nnn].val=num_sui;
+                var string_json = JSON.stringify(json_ss);
+                localStorage.listData = string_json ;
+                ngp.val(num_sui);
             })
 
-        },
-        json_show(){
-            let _this =this;
-            $.ajax({
-                url:"../json/shopping.json",
-                type:"get",
-                async:"json",
-                success:function(data){
-                    _this.shopping_show(data);
-                    _this.event();
-                        return data;
-                }
-            })
         }
+       
     }
 }())

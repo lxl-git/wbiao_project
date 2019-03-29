@@ -7,11 +7,29 @@ var $top_aaa = (function(){
              $top_box_show =$('.top_box'); // 下拉容器
              $top_box_fool = $('.top_box_fool');// 下拉显示
              $top_box_show_a = $('.top_box > a') // 下拉容器a
-             $dd_a = $('.inst_middle dl dd a');// 尾部a标签
+             
              this.event();
              this.logdr();
         },
+        weibu(){
+            $dd_a = $('.inst_middle dl dd a');// 尾部a标签
+            $dd_a.on("mouseenter",function(){
+                $(this).css('color','#fff');
+            })
+            $dd_a.on("mouseleave",function(){
+                $(this).css('color','rgb(153, 153, 153)');
+            })
+        },
         event(){
+
+            // let $top_top_i = $('.top_top_i');
+            //  var  json_data =JSON.parse(localStorage.listData);
+            // let num_g= 0;
+            // for(var i = 0 ;i< json_data.length;i++){
+            //   num_g = num_g + json_data[i].val;
+            //   $top_top_i.text(num_g);
+            // }
+
             $top_box.on("mouseenter","a",function(){  // a标签移入
                 $(this).css("text-decoration","underline");
                 $top_box_show_a.css("text-decoration","none");
@@ -28,12 +46,7 @@ var $top_aaa = (function(){
                 $top_box_fool.css('display','none');
             })
             //尾部
-            $dd_a.on("mouseenter",function(){
-                $(this).css('color','#fff');
-            })
-            $dd_a.on("mouseleave",function(){
-                $(this).css('color','rgb(153, 153, 153)');
-            })
+           
         },
         logdr(){
             
@@ -57,10 +70,17 @@ var $top_aaa = (function(){
             if($top_rifht_left_a1.hasClass('top_del')){
                 $del = $('.top_del');
                 $del.on('click',function(){
-                    localStorage.removeItem('phone');
+                    localStorage.clear();
                     location.reload();
                 })
             }
         }
     }
 }())
+
+$('.header').load('../pages/public.html #header_box', function() {
+    $top_aaa.init();// 公共js 执行
+});
+$('.footer').load('../pages/public.html #footer-box',function(){
+    $top_aaa.weibu();// 公共js 执行
+});
