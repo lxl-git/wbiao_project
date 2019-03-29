@@ -374,7 +374,11 @@ header .w_header_right {
 .footer_ggt {
   float: left;
   margin: -5px 0 0 187px; }
-
+  .footer_ggt a{
+    display: block;
+    width: 113px;
+    height: 130px;
+  }
 .footer-foot {
   width: 1200px;
   margin: 0 auto;

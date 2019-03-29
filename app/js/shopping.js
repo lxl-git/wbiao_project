@@ -21,12 +21,37 @@ var shopping =(function(){
             var show_you = $('.main_show_shopping');
             var json_data;
             //判断是否登入
-            json_data =JSON.parse(localStorage.listData);
+  
             var loadList = localStorage.phone;
             if(loadList){
                 if(json_data.length-0>=1){
                     show_you.css('display','block');
                     show_wu.css('display','none');
+                    json_data =JSON.parse(localStorage.listData);
+                    json_data.forEach(x => {
+                        var innerHTML = `
+                        <div class="shopping_show_1">
+                        <i class="rad ishow lpl"></i>
+                        <a href="javascript:;" class="show_img"><img src="../image/${x.img}" alt=""></a>
+                        <h3 class="text_aaa">
+                            <em>${x.title}</em>
+                            <i>真皮 白色 鳄鱼皮</i>
+                        </h3>
+                        <div class="bottom_p1">¥<em class="danjia">${x.price}</em></div>
+                        <div class="show_input">
+                            <i class="btn_min">-</i>
+                            <input type="text" class="num_btn" value="${x.val}" readonly="readonly">
+                            <i class="btn_max">+</i>
+                        </div>
+                        <p class="num_sss">¥<em class="zongjia">${x.price * x.val}</em></p>
+                        <div class="show_btn">
+                            <a href="javascript:;" class="del">删除</a>
+                            <a href="javascript:;" class="yys">移入收藏</a>
+                        </div>
+                       </div>
+                        `;
+                        $box.append(innerHTML);
+                   });
                 }
                 else{
                     show_you.css('display','none');
@@ -38,30 +63,7 @@ var shopping =(function(){
                 show_wu.css('display','block');   
             }
 
-            json_data.forEach(x => {
-                 var innerHTML = `
-                 <div class="shopping_show_1">
-                 <i class="rad ishow lpl"></i>
-                 <a href="javascript:;" class="show_img"><img src="../image/${x.img}" alt=""></a>
-                 <h3 class="text_aaa">
-                     <em>${x.title}</em>
-                     <i>真皮 白色 鳄鱼皮</i>
-                 </h3>
-                 <div class="bottom_p1">¥<em class="danjia">${x.price}</em></div>
-                 <div class="show_input">
-                     <i class="btn_min">-</i>
-                     <input type="text" class="num_btn" value="${x.val}" readonly="readonly">
-                     <i class="btn_max">+</i>
-                 </div>
-                 <p class="num_sss">¥<em class="zongjia">${x.price * x.val}</em></p>
-                 <div class="show_btn">
-                     <a href="javascript:;" class="del">删除</a>
-                     <a href="javascript:;" class="yys">移入收藏</a>
-                 </div>
-                </div>
-                 `;
-                 $box.append(innerHTML);
-            });
+           
             $box.on('click','.del',function(){
                 let nnn= $(this).index('.del');
                 console.log(json_data[nnn])  
