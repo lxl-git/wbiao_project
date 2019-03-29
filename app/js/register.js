@@ -1,11 +1,6 @@
-require(['reg_checkInput', 'api'], function(reg, api) { 
+require(['reg_checkInput', 'api', 'reg_eyes', 'code'], function(reg, api, eyes, code) { 
     reg.init();
-} )
-
-require(['reg_eyes'], function(eyes) {
     eyes.init();
+    api.createCode();
+    code.init();
 } )
-
-// require(['reg_code'], function(code) {
-//     code.init();
-// } )

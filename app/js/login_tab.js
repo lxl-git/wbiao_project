@@ -1,5 +1,5 @@
 define(['api'], function(api, tab) {
-    let tabAll, phone_login, code_login, password_login, pos, btnAll, dowmload_pic, dowmload, login_btn;
+    let tabAll, phone_login, code_login, password_login, pos, btnAll, dowmload_pic, dowmload, login_btn, code;
     return {
         init() {
             tabAll = api.$All('span');
@@ -12,7 +12,6 @@ define(['api'], function(api, tab) {
             dowmload_pic = api.$('.qr');
             dowmload = api.$('.dowmload');
             this.event();
-            console.log(login_btn);
         },
         event() {
             const self = this;
