@@ -55,8 +55,29 @@ define(['api'], function(api) {
                         continue;
                     }
                     if(none) {
-                        console.log(none)
+                        // console.log(none)
                         console.log('所有表单验证成功');
+                        const $from = api.$('.content_box')
+                        var obj = {
+                            phone: $from['phone'].value,
+                            password: $from['password'].value
+                        }
+                        api.sendAjax('server/register/php',{
+                            method: 'POST',
+                            data: obj
+                        })
+                        .then((date) => {
+                            if(date.code == 200) {
+                                console.log(date)
+                                localStorage.phone = JSON.stringify(date);
+                                location.href = 'http://localhost/wbiao_project/dist/index.html';
+                            }else {
+                                alert('用户名或密码错误，请重试')
+                            }
+                        })
+                        .catch((date) => {
+                            alert(date)
+                        });
                     }else {
                         inputAll[i].focus();
                         e.preventDefault ? e.preventDefault() : e.returnValue = false;

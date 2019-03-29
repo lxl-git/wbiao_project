@@ -181,6 +181,11 @@ $bg: #cc5252;
                         border: 0;
                         background: #b1b1b1;
                     }
+                    #myCanvas {
+                        height: 42px;
+                        text-align: center;
+                        border:1px solid #d3d3d3;
+                    }
                 }
                 .login {
                     display: block;

@@ -138,7 +138,7 @@ $(document).ready(function () {
     var shop = (function () {
         return {
             getShopData() {
-                $.getJSON('../json/json.json', data => {
+                $.getJSON('json/json.json', data => {
                     this.insertData(data);
                     $('.show-img').click(function(){
                         localStorage.uid = this.id;
