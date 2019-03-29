@@ -80,9 +80,9 @@ var $top_aaa = (function(){
     }
 }())
 
-$('.header').load('../pages/public.html #header_box', function() {
+$('.header').load('http://localhost:2080/wbiao_project/dist/pages/public.html #header_box', function() {
     $top_aaa.init();// 公共js 执行
 });
-$('.footer').load('../pages/public.html #footer-box',function(){
+$('.footer').load('http://localhost:2080/wbiao_project/dist/pages/public.html #footer-box',function(){
     $top_aaa.weibu();// 公共js 执行
 });
