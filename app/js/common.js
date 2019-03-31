@@ -52,16 +52,19 @@ var $top_aaa = (function(){
             
             let $top_rifht_left_a1= $('.top_rifht_left_a1');
             let $top_right_Left_a2 = $('.top_right_Left_a2');
-            var phone = localStorage.getItem('phone');
+            var phone_I = JSON.parse(localStorage.phone) ;
+            var phone = phone_I.phone;
             if(phone){
                 $top_rifht_left_a1.text('退出');
+                $top_rifht_left_a1.attr('href','javascript:;');
                 $top_rifht_left_a1.addClass('.top_del')
                 $top_rifht_left_a1.css('float','right');
-                $top_right_Left_a2.text('用户  '+phone);
+                $top_right_Left_a2.text('用户'+phone);
                 $top_right_Left_a2.attr('href','javascript:;');
                 $top_right_Left_a2.css({'width':'130px','font-weight':'700','color':'#cc9952'});
             }else{
                 $top_rifht_left_a1.text('请登录');
+                $top_rifht_left_a1.attr('href','login.html');
                 $top_rifht_left_a1.removeClass('top_del');
                 $top_rifht_left_a1.css('float','left');
                 $top_right_Left_a2.text('注册即送3500元大礼包');
@@ -80,9 +83,9 @@ var $top_aaa = (function(){
     }
 }())
 
-$('.header').load('http://localhost:2080/wbiao_project/dist/pages/public.html #header_box', function() {
+$('.header').load('http://localhost/wbiao_project/dist/pages/public.html #header_box', function() {
     $top_aaa.init();// 公共js 执行
 });
-$('.footer').load('http://localhost:2080/wbiao_project/dist/pages/public.html #footer-box',function(){
+$('.footer').load('http://localhost/wbiao_project/dist/pages/public.html #footer-box',function(){
     $top_aaa.weibu();// 公共js 执行
 });
